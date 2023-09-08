@@ -1,8 +1,8 @@
 <template>
     <div>
-        <Navbar/>
-        <Hero/>
-        <Middle/>
-        <End/>
+        <Navbar />
+        <Hero />
+        <Middle />
+        <End />
     </div>
 </template>

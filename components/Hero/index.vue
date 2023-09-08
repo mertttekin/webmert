@@ -7,13 +7,13 @@
         <span class="text-white sm:text-3xl text-xl">Currently, I'm a working at <span class="font-semibold">NGSI</span> . </span>
         <div class="flex sm:space-x-20 space-x-5">
             <button
-                class="sm:w-72 w-32 rounded-xl shadow sm:py-5 py-1 sm:px-20 px-1 bg-gradient-to-b from-[#14173E] to-[#645799] hover:from-[#645799] hover:to-[#14173E]">
+                class="sm:w-80 w-32 rounded-xl shadow sm:py-5 py-1 sm:px-20 px-1 bg-gradient-to-b from-[#14173E] to-[#645799] hover:from-[#645799] hover:to-[#14173E]">
                 <span class="text-white text-sm sm:text-lg">
                     See my resume
                 </span>
             </button>
             <button
-                class="sm:w-72 w-32 rounded-xl shadow sm:py-5 py-1 sm:px-20 px-1 bg-gradient-to-b from-[#14173E] to-[#645799] hover:from-[#645799] hover:to-[#14173E]">
+                class="sm:w-80 w-32 rounded-xl shadow sm:py-5 py-1 sm:px-20 px-1 bg-gradient-to-b from-[#14173E] to-[#645799] hover:from-[#645799] hover:to-[#14173E]">
                 <span class="text-white text-sm sm:text-lg">
                     Get in touch
                 </span>

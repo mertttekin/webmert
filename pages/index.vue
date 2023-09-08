@@ -1,5 +1,7 @@
 <template>
-    <div class="">
+    <div>
         <Navbar/>
+        <Hero/>
+        <Middle/>
     </div>
 </template>

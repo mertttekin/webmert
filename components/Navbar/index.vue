@@ -1,11 +1,11 @@
 <template>
-    <div class="bg-[#9F9BB240] max-w-7xl mx-auto my-28 rounded-lg">
-        <ul class="flex justify-between font-quicksand text-2xl capitalize text-[#C5C5C5] py-4 px-10 font-medium">
+    <div class="bg-[#9F9BB240] max-w-7xl mx-auto sm:my-28 rounded-lg">
+        <ul class="flex justify-between font-quicksand text-xs items-center sm:text-2xl capitalize text-[#C5C5C5] py-4 px-10 font-medium">
             <li>about me</li>
             <li>my project</li>
             <li>contact me</li>
             <li>my skills</li>
-            <li class="flex items-center justify-around space-x-3">
+            <li class="flex items-center justify-around space-x-3 w-10 sm:w-20">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 34 34" fill="none">
                     <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M30.1905 33.9551H3.81555C1.73462 33.9551 0.047699 32.2682 0.047699 30.1872V3.81228C0.047699 1.73136 1.73462 0.0444336 3.81555 0.0444336H30.1905C32.2714 0.0444336 33.9583 1.73136 33.9583 3.81228V30.1872C33.9583 32.2682 32.2714 33.9551 30.1905 33.9551ZM24.2146 29.2453H29.2467V18.9079C29.2467 14.534 26.7673 12.4192 23.3041 12.4192C19.8393 12.4192 18.3812 15.1173 18.3812 15.1173V12.918H13.5316V29.2453H18.3812V20.6745C18.3812 18.378 19.4383 17.0114 21.4617 17.0114C23.3216 17.0114 24.2146 18.3246 24.2146 20.6745V29.2453ZM4.75567 7.76717C4.75567 9.43098 6.09423 10.78 7.74609 10.78C9.39796 10.78 10.7357 9.43098 10.7357 7.76717C10.7357 6.10336 9.39796 4.7543 7.74609 4.7543C6.09423 4.7543 4.75567 6.10336 4.75567 7.76717ZM10.2988 29.2453H5.24198V12.918H10.2988V29.2453Z"

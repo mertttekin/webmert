@@ -43,7 +43,7 @@
                                 viewBox="0 0 119 119" fill="none">
                                 <circle cx="59.5" cy="59.5" r="59.5" fill="#540FB1" />
                             </svg>
-                            <img class="absolute w-20" src="@/git.png" alt=""/>
+                            <img class="absolute w-20" src="~/assets/img/git.png" alt=""/>
                         </div>
                         <p class="text-white mt-16 font-semibold">Git</p>
                     </li>
@@ -53,7 +53,7 @@
                                 viewBox="0 0 119 119" fill="none">
                                 <circle cx="59.5" cy="59.5" r="59.5" fill="#540FB1" />
                             </svg>
-                            <img class="absolute w-16" src="@/js.png" alt=""/>
+                            <img class="absolute w-16" src="~/assets/img/js.png" alt=""/>
                         </div>
                         <p class="text-white mt-16 font-semibold">JavaScript</p>
                     </li>

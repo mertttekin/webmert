@@ -8,5 +8,5 @@ body{
 
 .gradiet{
     border-radius: 91rem;
-    background: radial-gradient(50% 50% at 50% 50%, rgba(118, 60, 172, 0.75) 0%, rgba(50, 15, 133, 0.00) 100%);
+    background: radial-gradient(50% 50% at 50% 50%, rgb(153, 80, 221) 0%, rgba(50, 15, 133, 0.00) 100%);
 }

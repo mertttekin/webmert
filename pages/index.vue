@@ -3,5 +3,6 @@
         <Navbar/>
         <Hero/>
         <Middle/>
+        <End/>
     </div>
 </template>

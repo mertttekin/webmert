@@ -13,7 +13,7 @@
         </div>
         <div class="flex-1 w-1/2 relative overflow-y-visible">
             <img class="object-cover w-full h-auto z-20 relative sm:-translate-y-[110px] md:-translate-y-[120px] lg:-translate-y-[220px] -translate-y-[60px]"
-                src="@/hero-img.png" alt="">
+                src="~/assets/img/hero-img.png" alt="">
             <svg class="absolute -top-32 left-0 animate-spin  lg:flex" xmlns="http://www.w3.org/2000/svg" width="333"
                 height="333" viewBox="0 0 488 517" fill="none">
                 <g filter="url(#filter0_f_41_196)">

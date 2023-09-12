@@ -1,6 +1,6 @@
 <template>
     <div
-        class="font-quicksand mx-auto flex space-y-5 max-w-7xl sm:py-20 py-10 my-2 p-4 sm:p-14 bg-[#D9D9D99E] rounded-3xl sm:h-80 h-52">
+        class="font-quicksand mx-auto flex space-y-5 max-w-7xl sm:py-20 py-10 my-2 p-4 sm:p-14 bg-[#D9D9D99E] rounded-3xl sm:h-80 h-52 min-w-[420px]">
         <div class="flex-1 w-1/2 space-y-2">
             <h1 class="text-black sm:text-5xl text-3xl font-bold">Hi! I'm <br>
                 <span class="">Mert
@@ -11,11 +11,11 @@
             </div>
             <p class="text-black sm:text-6xl text-2xl font-bold whitespace-nowrap pt-5">Front-end Developer</p>
         </div>
-        <div
-            class="flex-1 w-1/2 sm:-translate-y-[110px] md:-translate-y-[120px] lg:-translate-y-[220px]  -translate-y-[60px] relative ">
-            <img class="object-cover w-full h-auto z-20 relative" src="@/hero-img.png" alt="">
-            <svg class="absolute top-32 z-10 animate-spin hidden lg:flex" xmlns="http://www.w3.org/2000/svg" width="488" height="517"
-                viewBox="0 0 488 517" fill="none">
+        <div class="flex-1 w-1/2 relative overflow-y-visible">
+            <img class="object-cover w-full h-auto z-20 relative sm:-translate-y-[110px] md:-translate-y-[120px] lg:-translate-y-[220px] -translate-y-[60px]"
+                src="@/hero-img.png" alt="">
+            <svg class="absolute -top-32 left-0 animate-spin  lg:flex" xmlns="http://www.w3.org/2000/svg" width="333"
+                height="333" viewBox="0 0 488 517" fill="none">
                 <g filter="url(#filter0_f_41_196)">
                     <ellipse cx="267.61" cy="292.109" rx="63.0934" ry="67.8907" fill="#FA00FF" />
                     <ellipse cx="305.091" cy="224.891" rx="63.0934" ry="67.8907" fill="#C4C4C4" />
@@ -31,7 +31,25 @@
                     </filter>
                 </defs>
             </svg>
-            <svg  class="absolute top-12 z-10 animate-spin hidden lg:flex" xmlns="http://www.w3.org/2000/svg" width="541" height="489" viewBox="0 0 541 489" fill="none">
+            <svg class="absolute -top-32 right-0 animate-spin  lg:flex" xmlns="http://www.w3.org/2000/svg" width="333"
+                height="333" viewBox="0 0 541 489" fill="none">
+                <g filter="url(#filter0_f_41_201)">
+                    <ellipse cx="275.735" cy="273.474" rx="67.4796" ry="58.5265" fill="#FFB800" />
+                    <ellipse cx="315.822" cy="215.526" rx="67.4796" ry="58.5265" fill="#C4C4C4" />
+                    <ellipse cx="315.822" cy="215.526" rx="67.4796" ry="58.5265" fill="#EBFF00" />
+                    <ellipse cx="224.958" cy="215.526" rx="67.4796" ry="58.5265" fill="#CC00FF" />
+                </g>
+                <defs>
+                    <filter id="filter0_f_41_201" x="0.478455" y="0" width="539.823" height="489"
+                        filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                        <feGaussianBlur stdDeviation="78.5" result="effect1_foregroundBlur_41_201" />
+                    </filter>
+                </defs>
+            </svg>
+            <svg class="absolute -top-32 right-0 animate-pulse" xmlns="http://www.w3.org/2000/svg" width="444" height="444"
+                viewBox="0 0 541 489" fill="none">
                 <g filter="url(#filter0_f_41_201)">
                     <ellipse cx="275.735" cy="273.474" rx="67.4796" ry="58.5265" fill="#FFB800" />
                     <ellipse cx="315.822" cy="215.526" rx="67.4796" ry="58.5265" fill="#C4C4C4" />
@@ -62,4 +80,5 @@
                 Get in touch
             </span>
         </button>
-</div></template>
+    </div>
+FFF</template>

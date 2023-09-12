@@ -52,13 +52,13 @@ body{
 
 @keyframes shadow {
     0%, 100% {
-        box-shadow: 0 0 20px 0 rgba(23, 155, 30, 0.5); /* Başlangıç ve bitişte shadow yok */
+        box-shadow: 0 0 400px 100px rgba(23, 155, 30, 0.3); /* Başlangıç ve bitişte shadow yok */
     }
     25%, 75% {
-        box-shadow: 0 0 20px 0 rgba(10, 79, 206, 0.5); /* Orta noktada shadow efekti */
+        box-shadow: 0 0 400px 100px rgba(10, 79, 206, 0.5);
     }
     50% {
-        box-shadow: 0 0 20px 0 rgba(180, 0, 24, 0.5); /* Orta noktada shadow efekti */
+        box-shadow: 0 0 400px 100px rgba(180, 0, 24, 0.5);
     }
 }
 

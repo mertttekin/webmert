@@ -1,6 +1,6 @@
 <template>
     <div
-        class="font-quicksand mx-auto flex space-y-5 max-w-7xl sm:py-20 py-10 my-2 p-4 sm:p-14 bg-[#D9D9D99E] rounded-3xl sm:h-80 h-52 min-w-[420px]">
+        class="z-20 relative font-quicksand mx-auto flex space-y-5 max-w-7xl sm:py-20 py-10 my-2 p-4 sm:p-14 bg-[#D9D9D99E] rounded-3xl sm:h-80 h-52 min-w-[420px]">
         <div class="flex-1 w-1/2 space-y-2">
             <h1 class="text-black sm:text-5xl text-3xl font-bold">Hi! I'm <br>
                 <span class="">Mert
@@ -12,7 +12,7 @@
             <p class="text-black sm:text-6xl text-2xl font-bold whitespace-nowrap pt-5">Front-end Developer</p>
         </div>
         <div class="flex-1 w-1/2 relative overflow-y-visible">
-            <img class="object-cover w-full h-auto z-20 relative sm:-translate-y-[110px] md:-translate-y-[120px] lg:-translate-y-[220px] -translate-y-[60px]"
+            <img class="increase-brightness object-cover w-full h-auto z-20 relative sm:-translate-y-[110px] md:-translate-y-[120px] lg:-translate-y-[220px] -translate-y-[60px] "
                 src="~/assets/img/hero-img.png" alt="">
             <svg class="absolute -top-32 left-0 animate-spin  lg:flex" xmlns="http://www.w3.org/2000/svg" width="333"
                 height="333" viewBox="0 0 488 517" fill="none">
@@ -81,4 +81,7 @@
             </span>
         </button>
     </div>
-FFF</template>
+    <div class="absolute gradiet h-96 w-4/6 z-0 -translate-y-96 opacity-1">
+
+    </div>
+</template>

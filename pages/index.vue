@@ -4,5 +4,6 @@
         <Hero />
         <Middle />
         <End />
+        <Footer/>
     </div>
 </template>

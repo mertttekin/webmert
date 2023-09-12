@@ -10,3 +10,58 @@ body{
     border-radius: 91rem;
     background: radial-gradient(50% 50% at 50% 50%, rgb(153, 80, 221) 0%, rgba(50, 15, 133, 0.00) 100%);
 }
+
+.linear {
+    border-radius: 46px;
+    opacity: 1;
+    background: linear-gradient(90deg, #FFF068 0%, #DBFF00 10.1%, #70FF00 20.17%, #00FFD1 30.19%, #00A3FF 47.29%, #FA00FF 60.83%, #FF8A00 71.77%, #F00 82.19%, #FF8A00 92.77%, #FFF068 99%);
+    background-size: 200% 100%;
+    animation: move 15s linear infinite, shadow 15s linear infinite;
+}
+
+@keyframes move {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.linear {
+    border-radius: 46px;
+    opacity: 1;
+    background-size: 200% 100%;
+    animation: move 15s linear infinite, shadow 15s linear infinite;
+}
+
+@keyframes move {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+@keyframes shadow {
+    0%, 100% {
+        box-shadow: 0 0 20px 0 rgba(23, 155, 30, 0.5); /* Başlangıç ve bitişte shadow yok */
+    }
+    25%, 75% {
+        box-shadow: 0 0 20px 0 rgba(10, 79, 206, 0.5); /* Orta noktada shadow efekti */
+    }
+    50% {
+        box-shadow: 0 0 20px 0 rgba(180, 0, 24, 0.5); /* Orta noktada shadow efekti */
+    }
+}
+
+
+
+

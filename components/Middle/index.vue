@@ -1,5 +1,5 @@
 <template>
-    <div class="font-quicksand text-white text-center sm:my-20">
+    <div class="font-quicksand text-white text-center my-10 sm:my-20">
         <h1 class="font-semibold sm:text-5xl text-3xl">
             Work Experience
         </h1>

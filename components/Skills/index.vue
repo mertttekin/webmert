@@ -75,14 +75,14 @@
                     <!-- Vue.js -->
                     <li class="col-span-1 flex flex-col items-center justify-center">
                         <div class="flex items-center justify-center lg:w-32 lg:h-32 sm:w-16 sm:h-16 w-10 h-10 bg-[#540FB1] rounded-full">
-                            <img class="absolute w-4 sm:w-6 lg:w-20" src="~/assets/img/mySql.png" alt="Git" />
+                            <img class="absolute w-4 sm:w-6 lg:w-20" src="~/assets/img/mySql.png" alt="Vue" />
                         </div>
                         <p class="text-white mt-2 font-semibold text-xs sm:text-lg">MySQL</p>
                     </li>
                     <!-- Nuxt 3 -->
                     <li class="col-span-1 flex flex-col items-center justify-center">
                         <div class="flex items-center justify-center lg:w-32 lg:h-32 sm:w-16 sm:h-16 w-10 h-10 bg-[#540FB1] rounded-full">
-                            <img class="absolute w-4 sm:w-6 lg:w-20" src="~/assets/img/Sql.png" alt="Git" />
+                            <img class="absolute w-4 sm:w-6 lg:w-20" src="~/assets/img/Sql.png" alt="Nuxt" />
                         </div>
                         <p class="text-white mt-2 font-semibold text-xs sm:text-lg">SQL</p>
                     </li>

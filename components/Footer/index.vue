@@ -2,12 +2,12 @@
     <div
         class="flex mt-32 relative font-quicksand bg-[url('~/assets/img/Group.png')] h-[50vh] bg-no-repeat bg-opacity-10 justify-end items-end">
         <div class="xl:w-7/12 md: w-full h-1/3 text-white ">
-            <div class="flex justify-around">
-                <span>+90 530 248 79 69</span>
-                <span>merttekin.bm@gmail.com</span>
+            <div class="sm:flex justify-around text-center items-center">
+                <h4>+90 530 248 79 69</h4>
+                <h4>merttekin.bm@gmail.com</h4>
                 <div>
                     <ul class="">
-                       <li class="flex items-center justify-around space-x-3 ">
+                       <li class="flex items-center justify-center mt-4 space-x-3 ">
                         <NuxtLink :to="'https://www.linkedin.com/in/mert-tekin3406/'" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -32,7 +32,6 @@
                         </li>
                     </ul>
                 </div>
-                <hr>
             </div>
             <hr class="h-1 my-10 mx-20" >
             <h3 class="text-center">

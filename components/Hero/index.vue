@@ -1,5 +1,5 @@
 <template>
-    <div class="sm:flex justify-between items-center max-w-7xl mx-auto h-[60vh]">
+    <div class="sm:flex justify-between items-center max-w-7xl mx-auto h-[75vh]">
         <div class="flex-[2]">
             <h1 class="text-white text-4xl sm:text-4xl lg:text-6xl font-dmSans transform duration-75 px-20">
                 Hi 👋, <br>

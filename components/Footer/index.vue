@@ -1,7 +1,7 @@
 <template>
     <div
         class="flex mt-32 relative font-quicksand bg-[url('~/assets/img/Group.png')] h-[50vh] bg-no-repeat bg-opacity-10 justify-end items-end">
-        <div class="xl:w-7/12 md: w-full h-1/3 text-white ">
+        <div class="xl:w-7/12 md: w-full h-1/2 text-white ">
             <div class="sm:flex justify-around text-center items-center">
                 <h4>+90 530 248 79 69</h4>
                 <h4>merttekin.bm@gmail.com</h4>

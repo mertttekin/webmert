@@ -8,5 +8,5 @@
 
 <script setup>
 import project from "@/data/project.json"
-console.log(project.projeler);
+
 </script>

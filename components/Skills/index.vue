@@ -1,9 +1,10 @@
 <template>
-    <div class="font-quicksand text-white text-center sm:my-20">
+    <div class="font-quicksand text-white text-center sm:my-10">
         <h1 class="font-semibold sm:text-5xl text-3xl">
-            My Skills
+            My Tech Stack
         </h1>
-        <div class="mt-32 max-w-5xl mx-auto space-y-14 sm:p-0 p-2 gradiet">
+        <h1 class="mt-4 text-[#A7A7A7]"> Technologies I’ve been working with recently</h1>
+        <div class="mt-16 max-w-5xl mx-auto space-y-14 sm:p-0 p-2 gradiet">
             <div>
                 <ul class="grid grid-cols-6 sm:mx-20 mx-2">
                     <!-- Vue.js -->

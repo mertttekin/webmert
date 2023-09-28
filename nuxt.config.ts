@@ -6,6 +6,7 @@ export default defineNuxtConfig({
   googleFonts: {
     families: {
       "Quicksand": [200, 300, 400, 500, 600, 700, 800],
+      "DM Sans": [200, 300, 400, 500, 600, 700, 800],
     },
     display: "swap",
     prefetch: true,

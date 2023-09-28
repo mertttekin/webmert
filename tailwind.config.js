@@ -12,7 +12,17 @@ module.exports = {
     extend: {
       fontFamily: {
         quicksand: ["Quicksand"],
+        dmSans: ["DM Sans"],
       },
+      maxWidth: {
+        "8xl": "1360px"
+      },
+      borderRadius :{
+        "4xl": "3rem"
+      },
+      height: {
+        'h-screen/2': '50vh',
+      }
     },
   },
   plugins: [],

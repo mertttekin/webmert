@@ -2,8 +2,9 @@
     <div>
         <Navbar />
         <Hero />
-        <Middle />
-        <End />
-        <Footer/>
+        <Skills />
+        <Experience />
+        <HomeProject/>
+        <Footer />
     </div>
 </template>

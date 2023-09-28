@@ -1,0 +1,52 @@
+{
+    "projeler":[
+        {
+            "id":1,
+            "url":"https://pizzeria-nuxt.pages.dev",
+            "projectName" : "Pizzeria Mini Golf",
+            "campanyName" : "NGSI",
+            "myRole" : "Fonted Developer",
+            "description" : " Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis veritatis dicta qui, deleniti aliquam voluptatum quis, quisquam dolor doloremque accusamus tenetur libero pariatur fuga doloribus! Totam velit autem possimus maxime."
+        },
+        {
+            "id":2,
+            "url" :"https://www.uniqfilo.com/",
+            "projectName" : "Uniqfilo",
+            "campanyName" : "Weeb Group",
+            "myRole" : "Fonted Developer",
+            "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis veritatis dicta qui, deleniti aliquam voluptatum quis, quisquam dolor doloremque accusamus tenetur libero pariatur fuga doloribus! Totam velit autem possimus maxime."
+        },
+        {
+            "id":3,
+            "url":"https://www.bulutmakina.com/",
+            "projectName" : "Bulut Makina",
+            "campanyName" : "Weeb Group",
+            "myRole" : "Fonted Developer",
+            "description" : " Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis veritatis dicta qui, deleniti aliquam voluptatum quis, quisquam dolor doloremque accusamus tenetur libero pariatur fuga doloribus! Totam velit autem possimus maxime."
+        },
+        {
+            "id":4,
+            "url":"https://ngsi-v2.pages.dev/",
+            "projectName" : "NGSI Website",
+            "campanyName" : "NGSI",
+            "myRole" : "Fonted Developer",
+            "description" : " Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis veritatis dicta qui, deleniti aliquam voluptatum quis, quisquam dolor doloremque accusamus tenetur libero pariatur fuga doloribus! Totam velit autem possimus maxime."
+        },
+        {
+            "id":5,
+            "url":"https://cloud7.pages.dev/",
+            "projectName" : "Cloud7",
+            "campanyName" : "NGSI",
+            "myRole" : "Fonted Developer",
+            "description" : " Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis veritatis dicta qui, deleniti aliquam voluptatum quis, quisquam dolor doloremque accusamus tenetur libero pariatur fuga doloribus! Totam velit autem possimus maxime."
+        },
+        {
+            "id":6,
+            "url":"https://emmila-ecommerce.pages.dev/",
+            "projectName" : "Emmila",
+            "campanyName" : "Bağımsız",
+            "myRole" : "Fonted Developer",
+            "description" : " Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis veritatis dicta qui, deleniti aliquam voluptatum quis, quisquam dolor doloremque accusamus tenetur libero pariatur fuga doloribus! Totam velit autem possimus maxime."
+        }
+    ]
+}

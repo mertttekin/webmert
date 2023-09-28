@@ -19,10 +19,10 @@
                         :src="data.url" frameborder="0"></iframe>
                 </div>
             </div>
-            <div class="flex-1 hidden xs:block sm:hidden xl:block">
-                <div class="bg-black p-5 rounded-3xl space-y-1">
+            <div class="flex-1 hidden xs:block sm:hidden xl:block pr-1 text-md">
+                <div class="bg-purple-500 h-[50vh] bg-opacity-5 border border-white p-5 rounded-lg space-y-1 shadow-xl shadow-white">
                     <h1>
-                        Proje Name : {{ data.projectName }}
+                        Project Name : {{ data.projectName }}
                     </h1>
                     <h2>
                         Company Name : {{ data.campanyName }}
@@ -36,23 +36,26 @@
         </div>
     </div>
     <!-- MOBİL START -->
-    <div class="md:hidden">
-        <div class="w-[100%] mx-auto relative">
+    <div class=" justify-center">
+        <div class="md:hidden w-[100%] mx-auto relative">
             <img src="~/assets/img/phone.png" class="h-full mx-auto " alt=""><img>
             <iframe class="absolute w-[89%] scale-75 h-[122%] -top-[13%] z-10 left-[50%] -translate-x-[50%] rounded-4xl"
                 :src="data.url" frameborder="0"></iframe>
         </div>
-        <div class="text-white mx-10 xl:hidden">
-            <div class="bg-black p-5 ">
+        <div class="xl:hidden w-[1px] bg-white h-20 mx-auto">
+        </div>
+        <div class="text-white mx-10 mb-10 xl:hidden">
+            <div class="bg-purple-500 bg-opacity-5 border border-white p-5 rounded-lg space-y-1 shadow-xl shadow-white ">
                 <h1>
-                    Proje Name : Pizzeria Mini Golf
-                </h1>
-                <h2>
-                    Company Name : NGSI
-                </h2>
-                <h2>
-                    My Role : Frontend Development
-                </h2>
+                        Proje Name : {{ data.projectName }}
+                    </h1>
+                    <h2>
+                        Company Name : {{ data.campanyName }}
+                    </h2>
+                    <h2>
+                        My Role :  {{ data.myRole }}
+                    </h2>
+                    <p>Description :   {{ data.description }}</p>
             </div>
         </div>
     </div>

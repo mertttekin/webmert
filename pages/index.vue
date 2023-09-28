@@ -6,5 +6,6 @@
         <Experience />
         <HomeProject/>
         <Footer />
+        <ScrollToTop/>
     </div>
 </template>

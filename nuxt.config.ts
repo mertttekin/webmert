@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
-  modules: ["@nuxtjs/google-fonts"],
+  modules: ["@nuxtjs/google-fonts","nuxt-icon"],
   googleFonts: {
     families: {
       "Quicksand": [200, 300, 400, 500, 600, 700, 800],

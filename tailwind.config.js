@@ -15,7 +15,7 @@ module.exports = {
         dmSans: ["DM Sans"],
       },
       maxWidth: {
-        "8xl": "1360px"
+        "8xl": "1440px"
       },
       borderRadius :{
         "4xl": "3rem"

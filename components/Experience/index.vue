@@ -1,5 +1,5 @@
 <template>
-    <div class="font-quicksand text-white text-center my-10 sm:my-20">
+    <div id="experience" class="font-quicksand text-white text-center my-10 sm:my-20">
         <h1 class="font-semibold sm:text-5xl text-3xl">
             Work Experience
         </h1>
@@ -8,7 +8,7 @@
                 class="max-w-7xl mx-auto space-y-1 py-2 items-start text-start px-10 rounded-3xl bg-gradient-to-br from-[#693B93] via-[#6EBFF439] to-[#4690D400]">
                 <h2 class="font-semibold sm:text-2xl text-2xl">Front-end Developer</h2>
                 <h3 class="font-extralight text-sm">NGSI Next Gen Solution & Innovation · May 2023 - Present</h3>
-                <p class="sm:text-xl text-lg">In my current role, I work with a Vue.js-based frameFFFwork called Nuxt.js to
+                <p class="sm:text-xl text-lg">In my current role, I work with a Vue.js-based framework called Nuxt.js to
                     create dynamic interfaces and
                     perform server-side rendering.</p>
             </li>
@@ -42,3 +42,4 @@
         </ul>
     </div>
 </template>
+

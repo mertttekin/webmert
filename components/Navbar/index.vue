@@ -1,12 +1,12 @@
 <template>
     <div id="navbar" class=" max-w-7xl mx-auto sm:my-14 border-b sm:border-none mb-5">
         <ul
-            class="flex justify-between font-dmSans text-lg items-center md:text-2xl capitalize text-[#C5C5C5] py-4 px-10 font-medium cursor-pointer">
+            class="flex justify-between font-dmSans text-xs items-center md:text-2xl capitalize text-[#C5C5C5] py-4 px-10 font-medium cursor-pointer">
             <NuxtLink :to="'/'" class="hover:scale-105 transform duration-75 hover:text-white">Home</NuxtLink>
-            <li class="hidden sm:block hover:scale-105 transform duration-75 hover:text-white">Work Experience</li>
-            <li class="hidden sm:block hover:scale-105 transform duration-75 hover:text-white">Skills</li>
+            <li @click="scrollToSection('experience',routeName)" class="hidden sm:block hover:scale-105 transform duration-75 hover:text-white">Work Experience</li>
+            <li @click="scrollToSection('skills',routeName)" class="hidden sm:block hover:scale-105 transform duration-75 hover:text-white">Skills</li>
             <NuxtLink :to="'/project'" class="hover:scale-105 transform duration-75 hover:text-white animate-pulse">Projects</NuxtLink>
-            <li class="hidden sm:block hover:scale-105 transform duration-75 hover:text-white">About Me</li>
+            <NuxtLink  :to="'/aboutme'" class="hover:scale-105 transform duration-75 hover:text-white">About Me</NuxtLink >
             <li class="flex items-center justify-around space-x-3 w-10 sm:w-20">
                 <NuxtLink :to="'https://github.com/mertttekin'" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none" class="hover:scale-105 transform duration-75">
@@ -33,3 +33,10 @@
         </ul>
     </div>
 </template>
+
+<script setup>
+    const route = useRoute()
+    const routeName = ref();
+    routeName.value = route.params
+    const { scrollToSection } = useNavigate();
+</script>

@@ -1,11 +1,9 @@
 <template>
     <div>
-        <Navbar />
         <Hero />
         <Skills />
         <Experience />
-        <HomeProject/>
-        <Footer />
-        <ScrollToTop/>
+        <HomeProject />
+        <ScrollToTop />
     </div>
 </template>

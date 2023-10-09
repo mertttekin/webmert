@@ -4,7 +4,7 @@ export default defineNuxtConfig({
     head:{
       meta:[
         {charset:"utf-8"},
-        {name:"description", content:"Mert Tekin portfolyo"},
+        {name:"description", content:"Mert Tekin's Portfolio - Explore my projects."},
         {name:"author", content:"Mert Tekin"},
       ]
     }

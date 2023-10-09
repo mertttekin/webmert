@@ -2,7 +2,7 @@
     <div
         class="md:flex max-w-7xl xl:mx-auto border border-white rounded-3xl shadow-xl cardShadow backdrop-blur-sm bg-opacity-30 mx-8">
         <div class="flex-[2] flex items-center">
-            <p class="text-white pl-10 pt-10 text-sm sm:text-2xl xl:text-3xl font-dmSans opacity-75">
+            <p class="text-white px-10 pt-10 text-sm sm:text-2xl xl:text-3xl font-dmSans opacity-75">
                 I am always in pursuit of new opportunities,
                 projects, and partnerships. Exchanging ideas about
                 technology, software development, and innovation

@@ -1,6 +1,6 @@
 <template>
     <div @click="scrollTo" v-if="isOnTop"
-        class="fixed bottom-4 left-4 w-16 h-16 rounded-full bg-gradient-to-l from-blue-700 via-purple-500 to-pink-500 justify-center items-center flex opacity-50 hover:opacity-100 cursor-pointer">
+        class="z-10 fixed bottom-4 left-4 w-16 h-16 rounded-full bg-gradient-to-l from-blue-700 via-purple-500 to-pink-500 justify-center items-center flex opacity-50 hover:opacity-100 cursor-pointer">
         <Icon name="tabler:circle-arrow-up-filled" class="w-2/3 h-2/3" />
     </div>
 </template>

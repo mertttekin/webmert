@@ -1,8 +1,8 @@
 <template>
     <div id="skills" class="font-quicksand text-white text-center my-3 sm:my-10">
-        <h1 class="font-semibold sm:text-5xl text-3xl">
+        <h2 class="font-semibold sm:text-5xl text-3xl">
             My Tech Stack
-        </h1>
+        </h2>
         <h1 class="mt-4 text-[#A7A7A7]"> Technologies I’ve been working with recently</h1>
         <div class="mt-16 max-w-5xl mx-auto space-y-14 sm:p-0 p-2 gradiet">
             <div>

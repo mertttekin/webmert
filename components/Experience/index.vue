@@ -1,8 +1,8 @@
 <template>
     <div id="experience" class="font-quicksand text-white text-center my-10 sm:my-20">
-        <h1 class="font-semibold sm:text-5xl text-3xl">
+        <h2 class="font-semibold sm:text-5xl text-3xl">
             Work Experience
-        </h1>
+        </h2>
         <ul class="mt-16 space-y-10 sm:p-0 p-2">
             <li
                 class="max-w-7xl mx-auto space-y-1 py-2 items-start text-start px-10 rounded-3xl bg-gradient-to-br from-[#693B93] via-[#6EBFF439] to-[#4690D400]">

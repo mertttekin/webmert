@@ -63,6 +63,14 @@
             "campanyName" : "Bağımsız",
             "myRole" : "Fonted Developer",
             "description" : " Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis veritatis dicta qui, deleniti aliquam voluptatum quis, quisquam dolor doloremque accusamus tenetur libero pariatur fuga doloribus! Totam velit autem possimus maxime."
+        },
+        {
+            "id":9,
+            "url":"https://laset.pages.dev/",
+            "projectName" : "La Set Restaurant",
+            "campanyName" : "NGSI",
+            "myRole" : "Fonted Developer",
+            "description" : " Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis veritatis dicta qui, deleniti aliquam voluptatum quis, quisquam dolor doloremque accusamus tenetur libero pariatur fuga doloribus! Totam velit autem possimus maxime."
         }
     ]
 }

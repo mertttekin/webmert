@@ -1,76 +1,109 @@
 {
-    "projeler":[
+    "projects": [
         {
-            "id":1,
-            "url":"https://pizzeria-nuxt.pages.dev",
-            "projectName" : "Pizzeria Mini Golf",
-            "campanyName" : "NGSI",
-            "myRole" : "Fonted Developer",
-            "description" : " Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis veritatis dicta qui, deleniti aliquam voluptatum quis, quisquam dolor doloremque accusamus tenetur libero pariatur fuga doloribus! Totam velit autem possimus maxime."
+            "id": 1,
+            "url": "https://pizzeria-nuxt.pages.dev",
+            "showImages": false,
+            "projectName": "Pizzeria Mini Golf",
+            "companyName": "NGSI",
+            "myRole": "Frontend Developer",
+            "description": "I was involved in the development of the frontend."
         },
         {
-            "id":2,
-            "url":"https://ngsi-v2.pages.dev/",
-            "projectName" : "NGSI Website",
-            "campanyName" : "NGSI",
-            "myRole" : "Fonted Developer",
-            "description" : " Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis veritatis dicta qui, deleniti aliquam voluptatum quis, quisquam dolor doloremque accusamus tenetur libero pariatur fuga doloribus! Totam velit autem possimus maxime."
+            "id": 2,
+            "url": "https://laset.pages.dev/",
+            "showImages": false,
+            "projectName": "La Set Restaurant",
+            "companyName": "NGSI",
+            "myRole": "Frontend Developer",
+            "description": "I developed the frontend."
         },
         {
-            "id":3,
-            "url":"https://cloud7.pages.dev/",
-            "projectName" : "Cloud7",
-            "campanyName" : "NGSI",
-            "myRole" : "Fonted Developer",
-            "description" : " Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis veritatis dicta qui, deleniti aliquam voluptatum quis, quisquam dolor doloremque accusamus tenetur libero pariatur fuga doloribus! Totam velit autem possimus maxime."
+            "id": 3,
+            "url": "https://cloud7.pages.dev/",
+            "showImages": false,
+            "projectName": "Cloud7",
+            "companyName": "NGSI",
+            "myRole": "Frontend Developer",
+            "description": "I developed the frontend."
         },
         {
-            "id":4,
-            "url":"https://emmila-ecommerce.pages.dev/",
-            "projectName" : "Emmila",
-            "campanyName" : "Bağımsız",
-            "myRole" : "Fonted Developer",
-            "description" : " Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis veritatis dicta qui, deleniti aliquam voluptatum quis, quisquam dolor doloremque accusamus tenetur libero pariatur fuga doloribus! Totam velit autem possimus maxime."
+            "id": 4,
+            "url": "https://yildizihale.pages.dev/",
+            "showImages": false,
+            "projectName": "Yıldız İhale",
+            "companyName": "Independent",
+            "myRole": "Frontend Developer",
+            "description": "I developed the frontend."
         },
         {
-            "id":5,
-            "url" :"https://www.uniqfilo.com/",
-            "projectName" : "Uniqfilo",
-            "campanyName" : "Weeb Group",
-            "myRole" : "Fonted Developer",
-            "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis veritatis dicta qui, deleniti aliquam voluptatum quis, quisquam dolor doloremque accusamus tenetur libero pariatur fuga doloribus! Totam velit autem possimus maxime."
+            "id": 5,
+            "url": "https://ngsi-v2.pages.dev/",
+            "showImages": false,
+            "projectName": "NGSI Website",
+            "companyName": "NGSI",
+            "myRole": "Frontend Developer",
+            "description": "I developed the frontend."
         },
         {
-            "id":6,
-            "url":"https://www.bulutmakina.com/",
-            "projectName" : "Bulut Makina",
-            "campanyName" : "Weeb Group",
-            "myRole" : "Fonted Developer",
-            "description" : " Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis veritatis dicta qui, deleniti aliquam voluptatum quis, quisquam dolor doloremque accusamus tenetur libero pariatur fuga doloribus! Totam velit autem possimus maxime."
+            "id": 6,
+            "url": "https://emmila-ecommerce.pages.dev/",
+            "showImages": false,
+            "projectName": "Emmila",
+            "companyName": "Independent",
+            "myRole": "Frontend Developer",
+            "description": "I developed the frontend. The project was stopped before completion."
         },
         {
-            "id":7,
-            "url":"https://restaurant.ngsi.de/",
-            "projectName" : "Restaurant Project",
-            "campanyName" : "NGSI",
-            "myRole" : "Fonted Developer",
-            "description" : " Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis veritatis dicta qui, deleniti aliquam voluptatum quis, quisquam dolor doloremque accusamus tenetur libero pariatur fuga doloribus! Totam velit autem possimus maxime."
+            "id": 7,
+            "url": "https://restaurant.ngsi.de/",
+            "showImages": false,
+            "projectName": "Restaurant Project",
+            "companyName": "NGSI",
+            "myRole": "Frontend Developer",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
         },
         {
-            "id":8,
-            "url":"https://yildizihale.pages.dev/",
-            "projectName" : "Yıldız İhale",
-            "campanyName" : "Bağımsız",
-            "myRole" : "Fonted Developer",
-            "description" : " Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis veritatis dicta qui, deleniti aliquam voluptatum quis, quisquam dolor doloremque accusamus tenetur libero pariatur fuga doloribus! Totam velit autem possimus maxime."
+            "id": 8,
+            "url": "https://www.bulutmakina.com/",
+            "showImages": false,
+            "projectName": "Bulut Makina",
+            "companyName": "Weeb Group",
+            "myRole": "Frontend Developer",
+            "description": "I developed the frontend."
         },
         {
-            "id":9,
-            "url":"https://laset.pages.dev/",
-            "projectName" : "La Set Restaurant",
-            "campanyName" : "NGSI",
-            "myRole" : "Fonted Developer",
-            "description" : " Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis veritatis dicta qui, deleniti aliquam voluptatum quis, quisquam dolor doloremque accusamus tenetur libero pariatur fuga doloribus! Totam velit autem possimus maxime."
+            "id": 9,
+            "url": "https://www.uniconsult.com.tr/",
+            "projectName": "UniqConsult",
+            "showImages": true,
+            "imgMain": "uniconsult-main.png",
+            "imgMobil": "uniconsult-mobil.png",
+            "companyName": "Weeb Group",
+            "myRole": "Frontend Developer",
+            "description": "I was involved in the organization."
+        },
+        {
+            "id": 10,
+            "url": "https://lgkampanya.com/",
+            "showImages": true,
+            "imgMain": "lg-main.png",
+            "imgMobil": "lg-mobil.png",
+            "projectName": "LG Kampanya",
+            "companyName": "Weeb Group",
+            "myRole": "Frontend Developer",
+            "description": "I was involved in moving the frontend of the project."
+        },
+        {
+            "id": 11,
+            "url": "https://www.uniqfilo.co",
+            "projectName": "Uniqfilo",
+            "showImages": true,
+            "imgMain": "",
+            "imgMobil": "",
+            "companyName": "Weeb Group",
+            "myRole": "Frontend Developer",
+            "description": "I developed the frontend."
         }
     ]
 }

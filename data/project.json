@@ -65,6 +65,17 @@
         },
         {
             "id": 8,
+            "url": "https://ngsi.pages.dev/",
+            "projectName": "GastroTech360",
+            "showImages": false,
+            "imgMain": "",
+            "imgMobil": "",
+            "companyName": "NGSI",
+            "myRole": "Frontend Developer",
+            "description": "I developed the frontend."
+        },
+        {
+            "id": 9,
             "url": "https://www.bulutmakina.com/",
             "showImages": false,
             "projectName": "Bulut Makina",
@@ -73,7 +84,7 @@
             "description": "I developed the frontend."
         },
         {
-            "id": 9,
+            "id": 10,
             "url": "https://www.uniconsult.com.tr/",
             "projectName": "UniqConsult",
             "showImages": true,
@@ -84,7 +95,7 @@
             "description": "I was involved in the organization."
         },
         {
-            "id": 10,
+            "id": 11,
             "url": "https://lgkampanya.com/",
             "showImages": true,
             "imgMain": "lg-main.png",
@@ -95,13 +106,24 @@
             "description": "I was involved in moving the frontend of the project."
         },
         {
-            "id": 11,
-            "url": "https://www.uniqfilo.co",
+            "id": 12,
+            "url": "https://www.uniqfilo.com",
             "projectName": "Uniqfilo",
-            "showImages": true,
+            "showImages": false,
             "imgMain": "",
             "imgMobil": "",
             "companyName": "Weeb Group",
+            "myRole": "Frontend Developer",
+            "description": "I developed the frontend."
+        },
+        {
+            "id": 13,
+            "url": "https://nefesyoga.pages.dev/",
+            "projectName": "Nefes Yoga",
+            "showImages": false,
+            "imgMain": "",
+            "imgMobil": "",
+            "companyName": "Independent",
             "myRole": "Frontend Developer",
             "description": "I developed the frontend."
         }

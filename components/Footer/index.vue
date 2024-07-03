@@ -1,7 +1,7 @@
 <template>
     <div
-        class="flex mt-12 relative font-quicksand bg-[url('~/assets/img/Group.png')] h-[50vh] bg-no-repeat bg-opacity-10 justify-end items-end">
-        <div class="xl:w-7/12 md: w-full h-4/6 text-white text-xl">
+        class="flex mt-12 relative font-quicksand bg-[url('~/assets/img/Group.png')] py-10 bg-no-repeat bg-opacity-10 justify-end items-end">
+        <div class="xl:w-9/12 md: w-full h-4/6 text-white text-xl">
             <div class="sm:flex justify-around text-center items-center">
                 <h4>+90 530 248 79 69</h4>
                 <h4>merttekin.bm@gmail.com</h4>

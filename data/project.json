@@ -1,131 +1,202 @@
 {
-    "projects": [
-        {
-            "id": 1,
-            "url": "https://pizzeria-nuxt.pages.dev",
-            "showImages": false,
-            "projectName": "Pizzeria Mini Golf",
-            "companyName": "NGSI",
-            "myRole": "Frontend Developer",
-            "description": "I was involved in the development of the frontend."
-        },
-        {
-            "id": 2,
-            "url": "https://laset.pages.dev/",
-            "showImages": false,
-            "projectName": "La Set Restaurant",
-            "companyName": "NGSI",
-            "myRole": "Frontend Developer",
-            "description": "I developed the frontend."
-        },
-        {
-            "id": 3,
-            "url": "https://cloud7.pages.dev/",
-            "showImages": false,
-            "projectName": "Cloud7",
-            "companyName": "NGSI",
-            "myRole": "Frontend Developer",
-            "description": "I developed the frontend."
-        },
-        {
-            "id": 4,
-            "url": "https://yildizihale.pages.dev/",
-            "showImages": false,
-            "projectName": "Yıldız İhale",
-            "companyName": "Independent",
-            "myRole": "Frontend Developer",
-            "description": "I developed the frontend."
-        },
-        {
-            "id": 5,
-            "url": "https://ngsi-v2.pages.dev/",
-            "showImages": false,
-            "projectName": "NGSI Website",
-            "companyName": "NGSI",
-            "myRole": "Frontend Developer",
-            "description": "I developed the frontend."
-        },
-        {
-            "id": 6,
-            "url": "https://emmila-ecommerce.pages.dev/",
-            "showImages": false,
-            "projectName": "Emmila",
-            "companyName": "Independent",
-            "myRole": "Frontend Developer",
-            "description": "I developed the frontend. The project was stopped before completion."
-        },
-        {
-            "id": 7,
-            "url": "https://restaurant.ngsi.de/",
-            "showImages": false,
-            "projectName": "Restaurant Project",
-            "companyName": "NGSI",
-            "myRole": "Frontend Developer",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
-        },
-        {
-            "id": 8,
-            "url": "https://ngsi.pages.dev/",
-            "projectName": "GastroTech360",
-            "showImages": false,
-            "imgMain": "",
-            "imgMobil": "",
-            "companyName": "NGSI",
-            "myRole": "Frontend Developer",
-            "description": "I developed the frontend."
-        },
-        {
-            "id": 9,
-            "url": "https://www.bulutmakina.com/",
-            "showImages": false,
-            "projectName": "Bulut Makina",
-            "companyName": "Weeb Group",
-            "myRole": "Frontend Developer",
-            "description": "I developed the frontend."
-        },
-        {
-            "id": 10,
-            "url": "https://www.uniconsult.com.tr/",
-            "projectName": "UniqConsult",
-            "showImages": true,
-            "imgMain": "uniconsult-main.png",
-            "imgMobil": "uniconsult-mobil.png",
-            "companyName": "Weeb Group",
-            "myRole": "Frontend Developer",
-            "description": "I was involved in the organization."
-        },
-        {
-            "id": 11,
-            "url": "https://lgkampanya.com/",
-            "showImages": true,
-            "imgMain": "lg-main.png",
-            "imgMobil": "lg-mobil.png",
-            "projectName": "LG Kampanya",
-            "companyName": "Weeb Group",
-            "myRole": "Frontend Developer",
-            "description": "I was involved in moving the frontend of the project."
-        },
-        {
-            "id": 12,
-            "url": "https://www.uniqfilo.com",
-            "projectName": "Uniqfilo",
-            "showImages": false,
-            "imgMain": "",
-            "imgMobil": "",
-            "companyName": "Weeb Group",
-            "myRole": "Frontend Developer",
-            "description": "I developed the frontend."
-        },
-        {
-            "id": 13,
-            "url": "https://nefesyoga.pages.dev/",
-            "projectName": "Nefes Yoga",
-            "showImages": false,
-            "imgMain": "",
-            "imgMobil": "",
-            "companyName": "Independent",
-            "myRole": "Frontend Developer",
-            "description": "I developed the frontend."
-        }
-    ]
+  "projects": [
+    {
+      "id": 1,
+      "url": "https://pizzeria-nuxt.pages.dev",
+      "showImages": false,
+      "projectName": "Pizzeria Mini Golf",
+      "companyName": "NGSI",
+      "myRole": "Frontend Developer",
+      "description": [
+        "Developed and maintained both front-end (client-side) and back-end (server-side) components.",
+        "Created an online food ordering platform using Nuxt.js.",
+        "Utilized Pinia for state management.",
+        "Designed the user interface with the Tailwind CSS framework.",
+        "Added multilingual support using the i18n plugin.",
+        "Implemented a module for QR code ordering from the table."
+      ]
+    },
+    {
+      "id": 2,
+      "url": "https://laset.pages.dev/",
+      "showImages": false,
+      "projectName": "La Set Restaurant",
+      "companyName": "NGSI",
+      "myRole": "Frontend Developer",
+      "description": [
+        "Developed the frontend for an online restaurant platform.",
+        "Designed and styled the user interface using Tailwind CSS.",
+        "Implemented features for menu display, reservation management, and online ordering."
+      ]
+    },
+    {
+      "id": 3,
+      "url": "https://cloud7v2.pages.dev/",
+      "showImages": false,
+      "projectName": "Cloud7",
+      "companyName": "NGSI",
+      "myRole": "Frontend Developer",
+      "description": [
+        "I developed the frontend.",
+        "Led the development of dynamic and responsive front-end components.",
+        "Implemented advanced state management using Pinia.",
+        "Designed and styled the user interface with Tailwind CSS.",
+        "Optimized performance and scalability with Cloudflare integration.",
+        "Developed interfaces using Vue.js and Nuxt.js."
+      ]
+    },
+    {
+      "id": 4,
+      "url": "https://yildizihale.com",
+      "showImages": false,
+      "projectName": "Yıldız İhale",
+      "companyName": "Independent",
+      "myRole": "Frontend Developer",
+      "description": [
+        "Developed the frontend for an auction platform focused on vehicle sales.",
+        "Implemented features for auctioning vehicles, including detailed information on vehicle features and visuals.",
+        "Ensured a responsive and intuitive user interface to enhance the auction experience.",
+        "Utilized Pinia for efficient state management.",
+        "Connected the frontend to a Laravel backend for dynamic content management.",
+        "Designed the user interface with the Tailwind CSS framework."
+      ]
+    },
+    {
+      "id": 5,
+      "url": "https://ngsi-v2.pages.dev/",
+      "showImages": false,
+      "projectName": "NGSI Website",
+      "companyName": "NGSI",
+      "myRole": "Frontend Developer",
+      "description": [
+        "Developed the corporate website’s frontend for NGSI.",
+        "Ensured a professional and clean design, enhancing the company’s online presence.",
+        "Integrated dynamic content and user-friendly navigation.",
+        "Added multilingual support using the i18n plugin."
+      ]
+    },
+    {
+      "id": 6,
+      "url": "https://emmila-ecommerce.pages.dev/",
+      "showImages": false,
+      "projectName": "Emmila",
+      "companyName": "Independent",
+      "myRole": "Frontend Developer",
+      "description": [
+        "Developed the frontend for an e-commerce platform focused on clothing.",
+        "The project was started using Nuxt3 and aimed to provide a modern online shopping experience.",
+        "The project is still in progress and was halted prior to completion.",
+        "Designed and styled the user interface using Tailwind CSS.",
+        "Utilized Pinia for efficient state management."
+      ]
+    },
+    {
+      "id": 7,
+      "url": "https://ngsi.pages.dev/",
+      "projectName": "GastroTech360",
+      "showImages": false,
+      "imgMain": "",
+      "imgMobil": "",
+      "companyName": "NGSI",
+      "myRole": "Frontend Developer",
+      "description": [
+        "Developed the frontend for a food technology platform.",
+        "Implemented advanced state management using Pinia.",
+        "Designed a modern and responsive user interface.",
+        "Integrated APIs for dynamic content management.",
+        "Utilized Supabase as the database to manage and store data efficiently."
+      ]
+    },
+    {
+      "id": 8,
+      "url": "https://www.bulutmakina.com/",
+      "showImages": false,
+      "projectName": "Bulut Makina",
+      "companyName": "Weeb Group",
+      "myRole": "Frontend Developer",
+      "description": [
+        "Developed the frontend for an elevator company.",
+        "Created a page to showcase the company’s products and services.",
+        "Focused on delivering a clear and professional presentation of the company's offerings.",
+        "Created the site using vanilla HTML, JavaScript, and CSS."
+      ]
+    },
+    {
+      "id": 9,
+      "url": "https://www.uniconsult.com.tr/",
+      "projectName": "UniqConsult",
+      "showImages": true,
+      "imgMain": "uniconsult-main.png",
+      "imgMobil": "uniconsult-mobil.png",
+      "companyName": "Weeb Group",
+      "myRole": "Frontend Developer",
+      "description": [
+        "Involved in the development of a promotional page for a data protection and technology consultancy firm.",
+        "Focused on creating a professional and engaging presentation of the firm’s services and expertise.",
+        "Created the site using vanilla HTML, JavaScript, and CSS."
+      ]
+    },
+    {
+      "id": 10,
+      "url": "https://lgkampanya.com/",
+      "showImages": true,
+      "imgMain": "lg-main.png",
+      "imgMobil": "lg-mobil.png",
+      "projectName": "LG Kampanya",
+      "companyName": "Weeb Group",
+      "myRole": "Frontend Developer",
+      "description": [
+        "Contributed to the frontend migration and enhancement of the project.",
+        "Developed a site to announce LG's campaigns, accept applications, and publish winners.",
+        "Built the site using vanilla HTML, JavaScript, and CSS for a straightforward implementation."
+      ]
+    },
+    {
+      "id": 11,
+      "url": "https://www.uniqfilo.com",
+      "projectName": "Uniqfilo",
+      "showImages": false,
+      "imgMain": "",
+      "imgMobil": "",
+      "companyName": "Weeb Group",
+      "myRole": "Frontend Developer",
+      "description": [
+        "Developed the frontend for a vehicle rental company.",
+        "Created the site using vanilla HTML, JavaScript, and CSS.",
+        "Focused on delivering a clean and functional user experience for vehicle rentals."
+      ]
+    },
+    {
+        "id": 12,
+        "url": "https://gastroteck-demo.pages.dev/",
+        "projectName": "Restaurant Project - Demo - Restaurant -1",
+        "showImages": false,
+        "imgMain": "",
+        "imgMobil": "",
+        "companyName": "NGSI",
+        "myRole": "Frontend Developer",
+        "description": [
+            "Developed the frontend for an online ordering platform.",
+            "The project is still in progress and was built using Nuxt3.",
+            "Integrated with a Laravel backend for dynamic content management.",
+            "Utilized Tailwind CSS for styling and Pinia for state management."
+        ]
+    },
+    {
+        "id": 13,
+        "url": "https://gastrotech360-restaurant.pages.dev/",
+        "projectName": "Restaurant Project - Demo - Restaurant -2",
+        "showImages": false,
+        "imgMain": "",
+        "imgMobil": "",
+        "companyName": "NGSI",
+        "myRole": "Frontend Developer",
+        "description": [
+            "Developed the frontend for an online ordering platform.",
+            "The project is still in progress and was built using Nuxt3.",
+            "Integrated with a Laravel backend for dynamic content management.",
+            "Utilized Tailwind CSS for styling and Pinia for state management."
+        ]
+    }
+  ]
 }

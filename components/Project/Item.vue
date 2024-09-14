@@ -33,16 +33,19 @@ const props = defineProps(["data", "odd"]);
             </div>
             <div class="flex-1 hidden xs:block sm:hidden xl:block pr-1 text-sm">
                 <div
-                    class="bg-gradient-to-l from-slate-800 via-transparent to-transparent h-[50vh] border border-white p-5 rounded-lg space-y-5 shadow-lg shadow-white flex flex-col items-start text-start">
-
+                    class="bg-gradient-to-l from-slate-800 via-transparent to-transparent border border-white p-5 rounded-lg space-y-5 shadow-lg shadow-white flex flex-col items-start text-start">
                     <span class="font-bold text-start">Project Name <br> <span class="text-gray-400 text-xs">{{
                         data.projectName }}</span> </span>
                     <span class="font-bold text-start">Campany Name <br> <span class="text-gray-400 text-xs">{{
                         data.companyName }}</span> </span>
                     <span class="font-bold text-start">My Role <br> <span class="text-gray-400 text-xs">{{ data.myRole
-                    }}</span> </span>
-                    <span class="font-bold text-start">Description <br> <span class="text-gray-400 text-xs">{{
-                        data.description }}</span> </span>
+                            }}</span> </span>
+                    <span class="font-bold text-start">Description <br> </span>
+                    <ul class="list-disc px-2">
+                        <li v-for="description in data.description" :key="description" class="text-gray-400 text-xs">{{
+                            description }}
+                        </li>
+                    </ul>
                     <nuxt-link :to="data.url" target="_blank" class="font-bold text-start text-blue-400"> <br> {{
                         data.url }} </nuxt-link>
                 </div>
@@ -71,9 +74,13 @@ const props = defineProps(["data", "odd"]);
                 <span class="font-bold text-start">Campany Name <br> <span class="text-gray-400 text-xs">{{
                     data.companyName }}</span> </span>
                 <span class="font-bold text-start">My Role <br> <span class="text-gray-400 text-xs">{{ data.myRole
-                }}</span> </span>
-                <span class="font-bold text-start">Description <br> <span class="text-gray-400 text-xs">{{
-                    data.description }}</span> </span>
+                        }}</span> </span>
+                <span class="font-bold text-start">Description <br> </span>
+                <ul class="list-disc px-2">
+                    <li v-for="description in data.description" :key="description" class="text-gray-400 text-xs text-start">{{
+                        description }}
+                    </li>
+                </ul>
                 <nuxt-link :to="data.url" target="_blank" class="font-bold text-start text-blue-400"> <br> {{
                     data.url }} </nuxt-link>
             </div>

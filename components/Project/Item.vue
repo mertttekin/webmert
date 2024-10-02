@@ -31,7 +31,7 @@ const props = defineProps(["data", "odd"]);
                     </div>
                 </div>
             </div>
-            <div class="flex-1 hidden xs:block sm:hidden xl:block pr-1 text-sm">
+            <div class="flex-1 hidden xs:block sm:hidden xl:block pr-1 text-sm ">
                 <div
                     class="bg-gradient-to-l from-slate-800 via-transparent to-transparent border border-white p-5 rounded-lg space-y-5 shadow-lg shadow-white flex flex-col items-start text-start">
                     <span class="font-bold text-start">Project Name <br> <span class="text-gray-400 text-xs">{{

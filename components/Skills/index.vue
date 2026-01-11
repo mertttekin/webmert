@@ -4,7 +4,8 @@
             My Tech Stack
         </h2>
         <h1 class="mt-4 text-[#A7A7A7]"> Technologies I’ve been working with recently</h1>
-        <div class="mt-16 max-w-5xl mx-auto space-y-14 sm:p-0 p-2 gradiet">
+        <div class="mt-16 max-w-5xl mx-auto space-y-14 sm:p-0 p-2 relative">
+            <div class="absolute inset-0 gradiet animate-pulse rounded-2xl -z-10"></div>
             <div>
                 <ul class="grid grid-cols-6 sm:mx-20 mx-2">
                     <!-- Vue.js -->
@@ -120,23 +121,24 @@
                         </div>
                         <p class="text-white mt-2 font-semibold text-xs sm:text-lg">Python</p>
                     </li>
-                <!-- HTML -->
-                <li class="col-span-1 flex flex-col items-center justify-center">
-                    <div
-                        class="flex items-center justify-center lg:w-32 lg:h-32 sm:w-16 sm:h-16 w-10 h-10 bg-[#540FB1] rounded-full">
-                        <img class="absolute w-4 sm:w-6 lg:w-20" src="~/assets/img/django.png" alt="HTML" />
-                    </div>
-                    <p class="text-white mt-2 font-semibold text-xs sm:text-lg">Django</p>
-                </li>
-                <!-- CSS -->
-                <li class="col-span-1 flex flex-col items-center justify-center">
-                    <div
-                        class="flex items-center justify-center lg:w-32 lg:h-32 sm:w-16 sm:h-16 w-10 h-10 bg-[#540FB1] rounded-full">
-                        <img class="absolute w-4 sm:w-6 lg:w-20" src="~/assets/img/aws.png" alt="CSS" />
-                    </div>
-                    <p class="text-white mt-2 font-semibold text-xs sm:text-lg">AWS</p>
-                </li>
-            </ul>
+                    <!-- HTML -->
+                    <li class="col-span-1 flex flex-col items-center justify-center">
+                        <div
+                            class="flex items-center justify-center lg:w-32 lg:h-32 sm:w-16 sm:h-16 w-10 h-10 bg-[#540FB1] rounded-full">
+                            <img class="absolute w-4 sm:w-6 lg:w-20" src="~/assets/img/django.png" alt="HTML" />
+                        </div>
+                        <p class="text-white mt-2 font-semibold text-xs sm:text-lg">Django</p>
+                    </li>
+                    <!-- CSS -->
+                    <li class="col-span-1 flex flex-col items-center justify-center">
+                        <div
+                            class="flex items-center justify-center lg:w-32 lg:h-32 sm:w-16 sm:h-16 w-10 h-10 bg-[#540FB1] rounded-full">
+                            <img class="absolute w-4 sm:w-6 lg:w-20" src="~/assets/img/aws.png" alt="CSS" />
+                        </div>
+                        <p class="text-white mt-2 font-semibold text-xs sm:text-lg">AWS</p>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
-</div></template>
+</template>

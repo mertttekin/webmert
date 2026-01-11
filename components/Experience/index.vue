@@ -3,11 +3,35 @@
         <h2 class="font-semibold sm:text-5xl text-3xl">
             Work Experience
         </h2>
-        <ul class="mt-16 space-y-10 sm:p-0 p-2">
+        <ul class="mt-16 space-y-10 sm:p-2 p-4">
             <li
                 class="max-w-7xl mx-auto space-y-1 py-2 items-start text-start px-10 rounded-3xl bg-gradient-to-br from-[#693B93] via-[#6EBFF439] to-[#4690D400]">
-                <h2 class="font-semibold sm:text-2xl text-2xl">Front-end Developer</h2>
-                <h3 class="font-extralight text-sm">NGSI Next Gen Solution & Innovation · May 2023 - Present</h3>
+                <h2 class="font-semibold sm:text-2xl text-2xl flex items-center gap-2 ">
+                    <span class="border-r-2 pr-2">Software Engineer</span>
+                    <a href="https://www.huawei.com/" target="_blank" rel="noopener" class="flex items-center gap-2">
+                        <img src="https://www.huawei.com/-/media/hcomponent-header/1.0.1.20250724165002/component/img/huawei_logo.png"
+                            alt="Huawei Logo" class="inline h-6 align-middle" />
+                    </a>
+                </h2>
+                <div class="flex items-center gap-2">
+                    <h3 class="font-extralight text-sm">2025 - Present</h3>
+                </div>
+                <p class="sm:text-xl text-lg">
+                    I worked on performance optimization for Deveco Studio, Huawei's advanced Integrated Development Environment (IDE), focusing on enhancing speed and efficiency for developers. Additionally, I contributed to the development of a multimedia project for HarmonyOS, delivering robust and innovative solutions within the Huawei ecosystem.
+                </p>
+            </li>
+            <li
+                class="max-w-7xl mx-auto space-y-1 py-2 items-start text-start px-10 rounded-3xl bg-gradient-to-br from-[#693B93] via-[#6EBFF439] to-[#4690D400]">
+                <h2 class="font-semibold sm:text-2xl text-2xl flex items-center gap-2 ">
+                    <span class="border-r-2 pr-2">Front-end Developer</span>
+                    <a href="https://www.linkedin.com/company/ngsi-next-gen-solution-innovation/" target="_blank" rel="noopener" class="flex items-center gap-2">
+                        <img src="https://ngsi-v2.pages.dev/ngsi-flat.png"
+                            alt="NGSI Logo" class="inline h-6 align-middle" />
+                    </a>
+                </h2>
+                <div class="flex items-center gap-2">
+                    <h3 class="font-extralight text-sm">NGSI Next Gen Solution & Innovation · May 2023 - Oct 2024</h3>
+                </div>
                 <p class="sm:text-xl text-lg">In my current role, I specialize in front-end development using Nuxt.js
                     (Nuxt 3) to create dynamic, responsive interfaces with server-side
                     rendering. I have primarily focused on developing the front-end for
@@ -18,15 +42,31 @@
             </li>
             <li
                 class="max-w-7xl mx-auto space-y-1 py-2 items-start text-start px-10 rounded-3xl bg-gradient-to-br from-[#693B93] via-[#6EBFF439] to-[#4690D400]">
-                <h2 class="font-semibold sm:text-2xl text-2xl">Front-end Web Developer</h2>
-                <h3 class="font-extralight text-sm">Weeb Group · Jan 2023 - Apr 2023</h3>
+                <h2 class="font-semibold sm:text-2xl text-2xl flex items-center gap-2 ">
+                    <span class="border-r-2 pr-2">Front-end Web Developer</span>
+                    <a href="https://weebgroup.com/" target="_blank" rel="noopener" class="flex items-center gap-2">
+                        <img src="https://weebgroup.com/1/img/weeb-top.png" alt="Weeb Group Logo"
+                            class="inline h-6 align-middle" />
+                    </a>
+                </h2>
+                <div class="flex items-center gap-2">
+                    <h3 class="font-extralight text-sm">Weeb Group · Jan 2023 - Apr 2023</h3>
+                </div>
                 <p class="sm:text-xl text-lg">I developed website features using HTML, CSS, and
                     JavaScript.</p>
             </li>
             <li
                 class="max-w-7xl mx-auto space-y-1 py-2 items-start text-start px-10 rounded-3xl bg-gradient-to-br from-[#693B93] via-[#6EBFF439] to-[#4690D400]">
-                <h2 class="font-semibold sm:text-2xl text-2xl">Software Development Specialist</h2>
-                <h3 class="font-extralight text-sm">Aksiyon Teknoloji Hizmetleri · Aug 2021 - Dec 2022</h3>
+                <h2 class="font-semibold sm:text-2xl text-2xl flex items-center gap-2 ">
+                    <span class="border-r-2 pr-2">Software Development Specialist</span>
+                    <a href="https://www.aksiyonteknoloji.com/" target="_blank" rel="noopener" class="flex items-center gap-2">
+                        <img src="https://aksiyonteknoloji.com/wp-content/uploads/2023/04/aksiyon-logo.png" alt="Aksiyon Teknoloji Logo"
+                            class="inline h-6 align-middle" />
+                    </a>
+                </h2>
+                <div class="flex items-center gap-2">
+                    <h3 class="font-extralight text-sm">Aksiyon Teknoloji Hizmetleri · Aug 2021 - Dec 2022</h3>
+                </div>
                 <p class="sm:text-xl text-lg"> started with the task of installing and commissioning our image
                     processing
                     sotfware and solving the
@@ -41,8 +81,16 @@
             </li>
             <li
                 class="max-w-7xl mx-auto space-y-1 py-2 items-start text-start px-10 rounded-3xl bg-gradient-to-br from-[#693B93] via-[#6EBFF439] to-[#4690D400]">
-                <h2 class="font-semibold sm:text-2xl text-2xl">Freelance Software Developer</h2>
-                <h3 class="font-extralight text-sm">Jan 2018 - Jan 2020</h3>
+                <h2 class="font-semibold sm:text-2xl text-2xl flex items-center gap-2 ">
+                    <span class="border-r-2 pr-2">Freelance Software Developer</span>
+                    <a href="#" target="_blank" rel="noopener" class="flex items-center gap-2">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Freelance Logo"
+                            class="inline h-6 align-middle" />
+                    </a>
+                </h2>
+                <div class="flex items-center gap-2">
+                    <h3 class="font-extralight text-sm">Jan 2018 - Jan 2020</h3>
+                </div>
                 <p class="sm:text-xl text-lg">Web applications, writing scripts for online game
                     platforms. Logo, banner, and slider desing for websites</p>
             </li>

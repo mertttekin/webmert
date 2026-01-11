@@ -14,7 +14,7 @@
                     </a>
                 </h2>
                 <div class="flex items-center gap-2">
-                    <h3 class="font-extralight text-sm">2025 - Present</h3>
+                    <h3 class="font-extralight text-sm">Huawei · 2025 - Present</h3>
                 </div>
                 <p class="sm:text-xl text-lg">
                     I worked on performance optimization for Deveco Studio, Huawei's advanced Integrated Development Environment (IDE), focusing on enhancing speed and efficiency for developers. Additionally, I contributed to the development of a multimedia project for HarmonyOS, delivering robust and innovative solutions within the Huawei ecosystem.

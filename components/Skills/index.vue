@@ -4,7 +4,7 @@
             My Tech Stack
         </h2>
         <h1 class="mt-4 text-[#A7A7A7]"> Technologies I’ve been working with recently</h1>
-        <div class="mt-16 max-w-5xl mx-auto space-y-14 sm:p-0 p-2 relative">
+        <div class="sm:mt-16 max-w-5xl mx-auto space-y-14 sm:p-0 p-2 relative">
             <div class="absolute inset-0 gradiet animate-pulse rounded-2xl -z-10"></div>
             <div>
                 <ul class="grid grid-cols-6 sm:mx-20 mx-2">

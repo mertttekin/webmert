@@ -3,7 +3,7 @@
         <h2 class="font-semibold sm:text-5xl text-3xl">
             Work Experience
         </h2>
-        <ul class="mt-16 space-y-2 sm:space-y-10 sm:p-2 p-4">
+        <ul class="sm:mt-16 space-y-2 sm:space-y-10 sm:p-2 p-4">
             <li
                 class="max-w-7xl mx-auto space-y-1 py-5 items-start text-start px-3 sm:px-10 rounded-3xl bg-gradient-to-br from-[#693B93] via-[#6EBFF439] to-[#4690D400]">
                 <h2 class="font-semibold sm:text-2xl text-2xl flex items-center gap-2 justify-between sm:justify-start">

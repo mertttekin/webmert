@@ -1,6 +1,13 @@
 <template>
-    <div class="space-y-10 sm:space-y-20 pb-10">
-        <AboutMe/>
-        <Skills/>
+    <div>
+        <AboutMe />
+        <Skills />
+        <ScrollToTop />
     </div>
 </template>
+
+<script setup>
+useHead({
+    title: 'About — Mert Tekin',
+})
+</script>

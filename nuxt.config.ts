@@ -4,8 +4,10 @@ export default defineNuxtConfig({
     head:{
       meta:[
         {charset:"utf-8"},
-        {name:"description", content:"Mert Tekin's Portfolio - Explore my projects."},
+        {name:"viewport", content:"width=device-width, initial-scale=1"},
+        {name:"description", content:"Mert Tekin — Software Engineer. I build fast, modern web experiences."},
         {name:"author", content:"Mert Tekin"},
+        {name:"theme-color", content:"#050505"},
       ]
     }
   },
@@ -14,8 +16,9 @@ export default defineNuxtConfig({
   modules: ["@nuxtjs/google-fonts","nuxt-icon"],
   googleFonts: {
     families: {
-      "Quicksand": [200, 300, 400, 500, 600, 700, 800],
-      "DM Sans": [200, 300, 400, 500, 600, 700, 800],
+      "Inter": [400, 500, 600, 700],
+      "Space Grotesk": [400, 500, 600, 700],
+      "JetBrains Mono": [400, 500, 600],
     },
     display: "swap",
     prefetch: true,

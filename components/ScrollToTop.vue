@@ -1,36 +1,27 @@
 <template>
-    <div @click="scrollTo" v-if="isOnTop"
-        class="z-10 fixed bottom-4 left-4 w-16 h-16 rounded-full bg-gradient-to-l from-blue-700 via-purple-500 to-pink-500 justify-center items-center flex opacity-50 hover:opacity-100 cursor-pointer">
-        <Icon name="tabler:circle-arrow-up-filled" class="w-2/3 h-2/3" />
-    </div>
+    <button v-if="visible" @click="scrollTo" aria-label="Scroll to top"
+        class="fixed bottom-5 right-5 z-40 flex h-11 w-11 items-center justify-center rounded-lg border border-white/10 bg-ink-900/90 text-zinc-400 backdrop-blur transition-colors hover:border-accent/50 hover:text-accent">
+        <Icon name="tabler:arrow-up" size="20" />
+    </button>
 </template>
 
-
 <script setup>
-
-const isOnTop = ref(false);
+const visible = ref(false)
 
 function scrollTo() {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
+    window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
 const scrollHandler = () => {
-    if (isOnTop.value && window?.scrollY < 100) {
-        isOnTop.value = false;
-    } else if (window?.scrollY > 50) {
-        isOnTop.value = true;
-    }
-};
+    visible.value = window.scrollY > 300
+}
 
 onMounted(async () => {
-    await nextTick();
-    document.addEventListener("scroll", scrollHandler);
-});
+    await nextTick()
+    document.addEventListener('scroll', scrollHandler, { passive: true })
+})
 
 onBeforeUnmount(() => {
-    document.removeEventListener("scroll", scrollHandler);
-});
+    document.removeEventListener('scroll', scrollHandler)
+})
 </script>

@@ -1,32 +1,31 @@
 <template>
-    <div class="font-quicksand text-white text-center my-10 sm:my-20">
-        <h2 class="font-semibold sm:text-5xl text-3xl">
-            Projects
-        </h2>
-        <h1 class="mt-4 text-[#A7A7A7]"> Things I’ve built so far</h1>
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-5 font-dmSans">
-            <button @click="showProject" class="bg-gradient-to-l from-blue-700 via-purple-500 to-pink-500 px-10 py-6 rounded-3xl w-[300px] ">
-                <span v-if="!diplayProject" class="capitalize">
-                    Show project on this page
-                </span>
-                <span v-else class="capitalize">
-                    Close project on this page
-                </span>
-            </button>
-            <NuxtLink :to="'/project'" class="bg-gradient-to-r from-blue-700 via-purple-500 to-pink-500 px-10 py-6 rounded-3xl w-[300px]">
-                <span>
-                    Go to Project Page
-                </span>
+    <section class="mx-auto max-w-6xl px-5 py-16 sm:px-6 sm:py-24">
+        <div class="flex items-end justify-between gap-6">
+            <SectionTitle index="03" label="work" title="Featured Projects"
+                subtitle="A selection of things I've built — with live previews." />
+            <NuxtLink to="/project" v-reveal
+                class="mb-12 hidden shrink-0 items-center gap-1.5 font-mono text-sm text-accent transition-colors hover:text-accent-dim sm:mb-16 md:inline-flex">
+                view_all()
+                <Icon name="tabler:arrow-right" size="16" />
             </NuxtLink>
         </div>
-        <Project v-if="diplayProject"/>
-    </div>
+
+        <div class="grid gap-6 md:grid-cols-2">
+            <ProjectItem v-for="(item, i) in featured" :key="item.id" :data="item" v-reveal="(i % 2) * 100" />
+        </div>
+
+        <div class="mt-12 flex justify-center">
+            <NuxtLink to="/project"
+                class="group inline-flex items-center gap-2 rounded-lg border border-white/10 px-8 py-3 font-mono text-sm text-zinc-300 transition-colors hover:border-accent/50 hover:text-accent">
+                view_all_projects()
+                <Icon name="tabler:arrow-right" size="16" class="transition-transform group-hover:translate-x-1" />
+            </NuxtLink>
+        </div>
+    </section>
 </template>
 
 <script setup>
-    const diplayProject = ref(false)
-    
-    function showProject() {
-        diplayProject.value = !diplayProject.value
-    }
+import project from '@/data/project.json'
+
+const featured = project.projects.slice(0, 4)
 </script>

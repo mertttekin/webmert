@@ -1,45 +1,29 @@
 <template>
-    <div
-        class="md:flex max-w-7xl xl:mx-auto border border-white rounded-3xl shadow-xl cardShadow backdrop-blur-sm bg-opacity-30 mx-8">
-        <div class="flex-[2] flex items-center">
-            <p class="text-white px-10 pt-10 text-sm sm:text-2xl xl:text-3xl font-dmSans opacity-75">
-                I am always in pursuit of new opportunities,
-                projects, and partnerships. Exchanging ideas about
-                technology, software development, and innovation
-                is a great source of excitement for me.
-                By continually expanding my knowledge and
-                experience, I aim to contribute to the world
-                of technology with creative solutions.
-            </p>
-        </div>
-        <div class="flex-1 p-10 overflow-hidden">
-            <div class="lg:h-[60vh] flex items-center">
-                <div class="relative mx-auto ">
-                    <img src="~/assets/img/aboutme.jpg" alt="Your Image" class="w-full h-auto rounded-3xl blur-none z-10 max-w-[200px] sm:min-w-[320px]">
-                    <div
-                        class="absolute top-0 left-0 w-full h-full bg-gradient-to-l from-transparent via-transparent to-[#191919] opacity-100 ">
-                    </div>
-                </div>
+    <section class="mx-auto max-w-6xl px-5 py-16 sm:px-6 sm:py-24">
+        <SectionTitle index="//" label="about" title="About Me" />
+
+        <div v-reveal class="grid items-center gap-10 lg:grid-cols-[1fr_360px] lg:gap-16">
+            <div class="space-y-5 text-base leading-relaxed text-zinc-400 sm:text-lg">
+                <p>
+                    I'm a software engineer who loves turning ideas into
+                    <span class="text-zinc-200">fast, clean and thoughtful</span> web experiences.
+                    I enjoy taking on interesting projects and collaborating with people who care about their craft.
+                </p>
+                <p>
+                    Exchanging ideas about technology, software development and innovation is a great source of
+                    excitement for me. By continually expanding my knowledge and experience, I aim to contribute
+                    to the world of technology with <span class="text-zinc-200">creative solutions</span>.
+                </p>
+                <p class="font-mono text-sm text-zinc-500">
+                    <span class="text-accent">$</span> currently_at: Huawei · based_in: Türkiye
+                </p>
+            </div>
+
+            <div class="relative mx-auto w-full max-w-[320px]">
+                <div class="absolute -inset-3 rounded-2xl border border-accent/20"></div>
+                <img src="~/assets/img/aboutme.jpg" alt="Mert Tekin"
+                    class="relative w-full rounded-2xl object-cover grayscale transition-all duration-500 hover:grayscale-0" />
             </div>
         </div>
-    </div>
+    </section>
 </template>
-
-<style scoped>
-
-    .cardShadow{
-        animation: shadowAnimation 5s infinite;
-    }
-
-    @keyframes shadowAnimation {
-    0% {
-        box-shadow: 0px 0px 40px rgba(255, 255, 255, 1);
-    }
-    50% {
-        box-shadow: 0px 0px 40px #540fb1;
-    }
-    100% {
-        box-shadow: 0px 0px 40px rgba(255, 255, 255, 1);
-    }
-}
-</style>

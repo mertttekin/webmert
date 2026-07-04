@@ -1,8 +1,8 @@
 <template>
-    <div class="space-y-10 sm:space-y-20 pb-10">
+    <div>
         <Hero />
-        <Skills />
         <Experience />
+        <Skills />
         <HomeProject />
         <ScrollToTop />
     </div>

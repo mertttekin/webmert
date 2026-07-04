@@ -1,6 +1,12 @@
 <template>
     <div>
-        <Project/>
-        <ScrollToTop/>
+        <Project />
+        <ScrollToTop />
     </div>
 </template>
+
+<script setup>
+useHead({
+    title: 'Projects — Mert Tekin',
+})
+</script>

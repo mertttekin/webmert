@@ -1,42 +1,96 @@
 <template>
-    <div id="navbar" class=" max-w-7xl mx-auto sm:my-14 border-b sm:border-none mb-5">
-        <ul
-            class="flex justify-between font-dmSans text-xs items-center md:text-2xl capitalize text-[#C5C5C5] py-4 px-10 font-medium cursor-pointer">
-            <NuxtLink :to="'/'" class="hover:scale-105 transform duration-75 hover:text-white">Home</NuxtLink>
-            <li @click="scrollToSection('experience',routeName)" class="hidden sm:block hover:scale-105 transform duration-75 hover:text-white">Work Experience</li>
-            <li @click="scrollToSection('skills',routeName)" class="hidden sm:block hover:scale-105 transform duration-75 hover:text-white">Skills</li>
-            <NuxtLink :to="'/project'" class="hover:scale-105 transform duration-75 hover:text-white animate-pulse">Projects</NuxtLink>
-            <NuxtLink  :to="'/aboutme'" class="hover:scale-105 transform duration-75 hover:text-white">About Me</NuxtLink >
-            <li class="flex items-center justify-around space-x-3 w-10 sm:w-20">
-                <NuxtLink :to="'https://github.com/mertttekin'" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none" class="hover:scale-105 transform duration-75">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M15 0C6.7125 0 0 6.7125 0 15C0 21.6375 4.29375 27.2437 10.2563 29.2313C11.0063 29.3625 11.2875 28.9125 11.2875 28.5188C11.2875 28.1625 11.2688 26.9813 11.2688 25.725C7.5 26.4188 6.525 24.8062 6.225 23.9625C6.05625 23.5312 5.325 22.2 4.6875 21.8438C4.1625 21.5625 3.4125 20.8687 4.66875 20.85C5.85 20.8313 6.69375 21.9375 6.975 22.3875C8.325 24.6562 10.4812 24.0187 11.3438 23.625C11.475 22.65 11.8688 21.9937 12.3 21.6187C8.9625 21.2437 5.475 19.95 5.475 14.2125C5.475 12.5813 6.05625 11.2313 7.0125 10.1813C6.8625 9.80625 6.3375 8.26875 7.1625 6.20625C7.1625 6.20625 8.41875 5.8125 11.2875 7.74375C12.4875 7.40625 13.7625 7.2375 15.0375 7.2375C16.3125 7.2375 17.5875 7.40625 18.7875 7.74375C21.6562 5.79375 22.9125 6.20625 22.9125 6.20625C23.7375 8.26875 23.2125 9.80625 23.0625 10.1813C24.0188 11.2313 24.6 12.5625 24.6 14.2125C24.6 19.9688 21.0938 21.2437 17.7563 21.6187C18.3 22.0875 18.7688 22.9875 18.7688 24.3937C18.7688 26.4 18.75 28.0125 18.75 28.5188C18.75 28.9125 19.0312 29.3813 19.7812 29.2313C22.759 28.2259 25.3465 26.3121 27.1796 23.7592C29.0127 21.2063 29.9991 18.1429 30 15C30 6.7125 23.2875 0 15 0Z"
-                            fill="#A7A7A7" />
-                    </svg>
-                </NuxtLink>
-                <NuxtLink :to="'https://www.linkedin.com/in/mert-tekin3406/'" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none" class="hover:scale-105 transform duration-75">
-                        <g clip-path="url(#clip0_14_33)">
-                            <path
-                                d="M15.0001 0.599976C7.0471 0.599976 0.600098 7.04698 0.600098 15C0.600098 22.953 7.0471 29.4 15.0001 29.4C22.9531 29.4 29.4001 22.953 29.4001 15C29.4001 7.04698 22.9531 0.599976 15.0001 0.599976ZM11.4751 20.9685H8.5591V11.5845H11.4751V20.9685ZM9.9991 10.4325C9.0781 10.4325 8.4826 9.77997 8.4826 8.97297C8.4826 8.14948 9.0961 7.51648 10.0366 7.51648C10.9771 7.51648 11.5531 8.14948 11.5711 8.97297C11.5711 9.77997 10.9771 10.4325 9.9991 10.4325ZM22.1251 20.9685H19.2091V15.768C19.2091 14.5575 18.7861 13.7355 17.7316 13.7355C16.9261 13.7355 16.4476 14.292 16.2361 14.8275C16.1581 15.018 16.1386 15.288 16.1386 15.5565V20.967H13.2211V14.577C13.2211 13.4055 13.1836 12.426 13.1446 11.583H15.6781L15.8116 12.8865H15.8701C16.2541 12.2745 17.1946 11.3715 18.7681 11.3715C20.6866 11.3715 22.1251 12.657 22.1251 15.42V20.9685Z"
-                                fill="#A7A7A7" />
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_14_33">
-                                <rect width="30" height="30" fill="white" />
-                            </clipPath>
-                        </defs>
-                    </svg>
-                </NuxtLink>
-            </li>
-        </ul>
-    </div>
+    <header class="fixed inset-x-0 top-0 z-50 transition-colors duration-300"
+        :class="scrolled ? 'border-b border-white/5 bg-ink-950/80 backdrop-blur-xl' : 'bg-transparent'">
+        <nav class="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:h-20 sm:px-6">
+            <!-- Logo -->
+            <NuxtLink to="/" class="font-mono text-sm text-zinc-100 sm:text-base" @click="menuOpen = false">
+                mert<span class="text-accent">.</span>tekin<span class="text-zinc-500">()</span>
+            </NuxtLink>
+
+            <!-- Desktop links -->
+            <ul class="hidden items-center gap-8 text-sm text-zinc-400 md:flex">
+                <li v-for="link in links" :key="link.label">
+                    <NuxtLink v-if="link.to" :to="link.to"
+                        class="transition-colors hover:text-white">{{ link.label }}</NuxtLink>
+                    <button v-else @click="scrollToSection(link.section, routePath)"
+                        class="transition-colors hover:text-white">{{ link.label }}</button>
+                </li>
+            </ul>
+
+            <div class="flex items-center gap-4">
+                <div class="hidden items-center gap-4 md:flex">
+                    <NuxtLink to="https://github.com/mertttekin" target="_blank" aria-label="GitHub"
+                        class="text-zinc-400 transition-colors hover:text-white">
+                        <Icon name="tabler:brand-github" size="20" />
+                    </NuxtLink>
+                    <NuxtLink to="https://www.linkedin.com/in/mert-tekin3406/" target="_blank" aria-label="LinkedIn"
+                        class="text-zinc-400 transition-colors hover:text-white">
+                        <Icon name="tabler:brand-linkedin" size="20" />
+                    </NuxtLink>
+                </div>
+                <a href="/MertTekinCV.pdf" target="_blank"
+                    class="hidden rounded-lg border border-white/10 px-4 py-2 font-mono text-xs text-zinc-300 transition-colors hover:border-accent/50 hover:text-accent md:block">
+                    resume.pdf
+                </a>
+
+                <!-- Mobile menu button -->
+                <button class="text-zinc-300 md:hidden" aria-label="Menu" @click="menuOpen = !menuOpen">
+                    <Icon :name="menuOpen ? 'tabler:x' : 'tabler:menu-2'" size="24" />
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile menu -->
+        <div v-if="menuOpen" class="border-b border-white/5 bg-ink-950/95 backdrop-blur-xl md:hidden">
+            <ul class="flex flex-col gap-1 px-5 py-4 text-sm text-zinc-300">
+                <li v-for="link in links" :key="link.label">
+                    <NuxtLink v-if="link.to" :to="link.to" class="block py-2.5" @click="menuOpen = false">
+                        {{ link.label }}
+                    </NuxtLink>
+                    <button v-else class="block w-full py-2.5 text-left"
+                        @click="scrollToSection(link.section, routePath); menuOpen = false">
+                        {{ link.label }}
+                    </button>
+                </li>
+                <li class="mt-2 flex items-center gap-5 border-t border-white/5 pt-4">
+                    <NuxtLink to="https://github.com/mertttekin" target="_blank" aria-label="GitHub" class="text-zinc-400">
+                        <Icon name="tabler:brand-github" size="22" />
+                    </NuxtLink>
+                    <NuxtLink to="https://www.linkedin.com/in/mert-tekin3406/" target="_blank" aria-label="LinkedIn" class="text-zinc-400">
+                        <Icon name="tabler:brand-linkedin" size="22" />
+                    </NuxtLink>
+                    <a href="/MertTekinCV.pdf" target="_blank" class="font-mono text-xs text-accent">resume.pdf</a>
+                </li>
+            </ul>
+        </div>
+    </header>
 </template>
 
 <script setup>
-    const route = useRoute()
-    const routeName = ref();
-    routeName.value = route.params
-    const { scrollToSection } = useNavigate();
+const route = useRoute()
+const routePath = computed(() => (route.path === '/' ? '' : route.path))
+const { scrollToSection } = useNavigate()
+
+const links = [
+    { label: 'Experience', section: 'experience' },
+    { label: 'Skills', section: 'skills' },
+    { label: 'Projects', to: '/project' },
+    { label: 'About', to: '/aboutme' },
+]
+
+const menuOpen = ref(false)
+const scrolled = ref(false)
+
+const onScroll = () => {
+    scrolled.value = window.scrollY > 10
+}
+
+onMounted(() => {
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+})
+
+onBeforeUnmount(() => {
+    window.removeEventListener('scroll', onScroll)
+})
 </script>

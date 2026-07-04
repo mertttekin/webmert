@@ -17,7 +17,7 @@
             <div class="relative aspect-video overflow-hidden bg-ink-800">
                 <img v-if="data.showImages" :src="`/img-projects/${data.imgMain}`" :alt="data.projectName"
                     class="h-full w-full object-cover object-top" loading="lazy" />
-                <div v-else-if="previewFailed"
+                <div v-else-if="data.offline || previewFailed"
                     class="flex h-full w-full flex-col items-center justify-center gap-2 bg-gradient-to-br from-ink-800 to-ink-900">
                     <Icon name="tabler:world-off" size="28" class="text-zinc-600" />
                     <p class="font-display text-lg font-semibold text-zinc-400">{{ data.projectName }}</p>
@@ -72,7 +72,7 @@ const displayUrl = computed(() =>
 const previewFailed = ref(false)
 
 onMounted(async () => {
-    if (props.data.showImages) return
+    if (props.data.showImages || props.data.offline) return
     const controller = new AbortController()
     const timer = setTimeout(() => controller.abort(), 6000)
     try {

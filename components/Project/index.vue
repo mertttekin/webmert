@@ -1,7 +1,7 @@
 <template>
     <section class="mx-auto max-w-6xl px-5 py-16 sm:px-6 sm:py-24">
         <SectionTitle index="03" label="work" title="Projects"
-            subtitle="Things I've built so far — live previews included, feel free to explore." />
+            subtitle="Things I've built so far — feel free to explore." />
 
         <div class="grid gap-6 md:grid-cols-2">
             <ProjectItem v-for="(item, i) in project.projects.slice(0, shownCount)" :key="item.id" :data="item"

@@ -2,7 +2,7 @@
     <section class="mx-auto max-w-6xl px-5 py-16 sm:px-6 sm:py-24">
         <div class="flex items-end justify-between gap-6">
             <SectionTitle index="03" label="work" title="Featured Projects"
-                subtitle="A selection of things I've built — with live previews." />
+                subtitle="A selection of things I've built along the way." />
             <NuxtLink to="/project" v-reveal
                 class="mb-12 hidden shrink-0 items-center gap-1.5 font-mono text-sm text-accent transition-colors hover:text-accent-dim sm:mb-16 md:inline-flex">
                 view_all()

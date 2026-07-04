@@ -3,7 +3,8 @@
     {
       "id": 1,
       "url": "https://pizzeria-nuxt.pages.dev",
-      "showImages": false,
+      "showImages": true,
+      "imgMain": "pizzeria-main.jpg",
       "projectName": "Pizzeria Mini Golf",
       "companyName": "NGSI",
       "myRole": "Frontend Developer",
@@ -19,7 +20,8 @@
     {
       "id": 2,
       "url": "https://laset.pages.dev/",
-      "showImages": false,
+      "showImages": true,
+      "imgMain": "laset-main.jpg",
       "projectName": "La Set Restaurant",
       "companyName": "NGSI",
       "myRole": "Frontend Developer",
@@ -32,7 +34,8 @@
     {
       "id": 3,
       "url": "https://cloud7v2.pages.dev/",
-      "showImages": false,
+      "showImages": true,
+      "imgMain": "cloud7-main.jpg",
       "projectName": "Cloud7",
       "companyName": "NGSI",
       "myRole": "Frontend Developer",
@@ -48,7 +51,8 @@
     {
       "id": 4,
       "url": "https://yildizihale.com",
-      "showImages": false,
+      "showImages": true,
+      "imgMain": "yildizihale-main.jpg",
       "projectName": "Yıldız İhale",
       "companyName": "Independent",
       "myRole": "Frontend Developer",
@@ -64,7 +68,8 @@
     {
       "id": 5,
       "url": "https://ngsi-v2.pages.dev/",
-      "showImages": false,
+      "showImages": true,
+      "imgMain": "ngsi-v2-main.jpg",
       "projectName": "NGSI Website",
       "companyName": "NGSI",
       "myRole": "Frontend Developer",
@@ -78,7 +83,8 @@
     {
       "id": 6,
       "url": "https://emmila-ecommerce.pages.dev/",
-      "showImages": false,
+      "showImages": true,
+      "imgMain": "emmila-main.jpg",
       "projectName": "Emmila",
       "companyName": "Independent",
       "myRole": "Frontend Developer",
@@ -94,8 +100,8 @@
       "id": 7,
       "url": "https://ngsi.pages.dev/",
       "projectName": "GastroTech360",
-      "showImages": false,
-      "imgMain": "",
+      "showImages": true,
+      "imgMain": "gastrotech360-main.jpg",
       "imgMobil": "",
       "companyName": "NGSI",
       "myRole": "Frontend Developer",
@@ -110,7 +116,8 @@
     {
       "id": 8,
       "url": "https://www.bulutmakina.com/",
-      "showImages": false,
+      "showImages": true,
+      "imgMain": "bulutmakina-main.jpg",
       "projectName": "Bulut Makina",
       "companyName": "Weeb Group",
       "myRole": "Frontend Developer",
@@ -126,7 +133,7 @@
       "url": "https://www.uniconsult.com.tr/",
       "projectName": "UniqConsult",
       "showImages": true,
-      "imgMain": "uniconsult-main.png",
+      "imgMain": "uniconsult-main.jpg",
       "imgMobil": "uniconsult-mobil.png",
       "companyName": "Weeb Group",
       "myRole": "Frontend Developer",
@@ -140,7 +147,7 @@
       "id": 10,
       "url": "https://lgkampanya.com/",
       "showImages": true,
-      "imgMain": "lg-main.png",
+      "imgMain": "lg-main.jpg",
       "imgMobil": "lg-mobil.png",
       "projectName": "LG Kampanya",
       "companyName": "Weeb Group",
@@ -155,8 +162,8 @@
       "id": 11,
       "url": "https://www.uniqfilo.com",
       "projectName": "Uniqfilo",
-      "showImages": false,
-      "imgMain": "",
+      "showImages": true,
+      "imgMain": "uniqfilo-main.jpg",
       "imgMobil": "",
       "companyName": "Weeb Group",
       "myRole": "Frontend Developer",
@@ -167,36 +174,37 @@
       ]
     },
     {
-        "id": 12,
-        "url": "https://gastroteck-demo.pages.dev/",
-        "projectName": "Restaurant Project - Demo - Restaurant -1",
-        "showImages": false,
-        "imgMain": "",
-        "imgMobil": "",
-        "companyName": "NGSI",
-        "myRole": "Frontend Developer",
-        "description": [
-            "Developed the frontend for an online ordering platform.",
-            "The project is still in progress and was built using Nuxt3.",
-            "Integrated with a Laravel backend for dynamic content management.",
-            "Utilized Tailwind CSS for styling and Pinia for state management."
-        ]
+      "id": 12,
+      "url": "https://gastroteck-demo.pages.dev/",
+      "projectName": "Restaurant Project - Demo - Restaurant -1",
+      "showImages": false,
+      "offline": true,
+      "imgMain": "",
+      "imgMobil": "",
+      "companyName": "NGSI",
+      "myRole": "Frontend Developer",
+      "description": [
+        "Developed the frontend for an online ordering platform.",
+        "The project is still in progress and was built using Nuxt3.",
+        "Integrated with a Laravel backend for dynamic content management.",
+        "Utilized Tailwind CSS for styling and Pinia for state management."
+      ]
     },
     {
-        "id": 13,
-        "url": "https://gastrotech360-restaurant.pages.dev/",
-        "projectName": "Restaurant Project - Demo - Restaurant -2",
-        "showImages": false,
-        "imgMain": "",
-        "imgMobil": "",
-        "companyName": "NGSI",
-        "myRole": "Frontend Developer",
-        "description": [
-            "Developed the frontend for an online ordering platform.",
-            "The project is still in progress and was built using Nuxt3.",
-            "Integrated with a Laravel backend for dynamic content management.",
-            "Utilized Tailwind CSS for styling and Pinia for state management."
-        ]
+      "id": 13,
+      "url": "https://gastrotech360-restaurant.pages.dev/",
+      "projectName": "Restaurant Project - Demo - Restaurant -2",
+      "showImages": true,
+      "imgMain": "restaurant-demo2-main.jpg",
+      "imgMobil": "",
+      "companyName": "NGSI",
+      "myRole": "Frontend Developer",
+      "description": [
+        "Developed the frontend for an online ordering platform.",
+        "The project is still in progress and was built using Nuxt3.",
+        "Integrated with a Laravel backend for dynamic content management.",
+        "Utilized Tailwind CSS for styling and Pinia for state management."
+      ]
     }
   ]
 }

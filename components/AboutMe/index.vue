@@ -21,9 +21,18 @@
 
             <div class="relative mx-auto w-full max-w-[320px]">
                 <div class="absolute -inset-3 rounded-2xl border border-accent/20"></div>
-                <img src="~/assets/img/aboutme.jpg" alt="Mert Tekin"
-                    class="relative w-full rounded-2xl object-cover grayscale transition-all duration-500 hover:grayscale-0" />
+                <div class="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-white/5">
+                    <div v-if="!loaded" class="absolute inset-0 animate-pulse bg-white/5"></div>
+                    <NuxtImg src="/img/aboutme.jpg" alt="Mert Tekin" width="320" height="400" loading="lazy"
+                        format="webp" quality="80" @load="loaded = true"
+                        class="relative h-full w-full rounded-2xl object-cover grayscale transition-all duration-500 hover:grayscale-0"
+                        :class="loaded ? 'opacity-100' : 'opacity-0'" />
+                </div>
             </div>
         </div>
     </section>
 </template>
+
+<script setup>
+const loaded = ref(false)
+</script>

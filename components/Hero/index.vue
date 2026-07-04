@@ -4,8 +4,8 @@
             <!-- Left: intro -->
             <div>
                 <div class="animate-fade-up inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.03] py-1.5 pl-1.5 pr-4">
-                    <img src="https://avatars.githubusercontent.com/u/32420405?v=4" alt="Mert Tekin"
-                        class="h-7 w-7 rounded-full" />
+                    <img src="https://avatars.githubusercontent.com/u/32420405?v=4" alt="Mert Tekin" width="28"
+                        height="28" fetchpriority="high" class="h-7 w-7 rounded-full" />
                     <span class="relative flex h-2 w-2">
                         <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60"></span>
                         <span class="relative inline-flex h-2 w-2 rounded-full bg-accent"></span>

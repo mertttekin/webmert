@@ -15,8 +15,13 @@
                     class="shrink-0 text-zinc-500 transition-colors group-hover:text-accent" />
             </div>
             <div class="relative aspect-video overflow-hidden bg-ink-800">
-                <img v-if="data.showImages" :src="`/img-projects/${data.imgMain}`" :alt="data.projectName"
-                    class="h-full w-full object-cover object-top" loading="lazy" />
+                <template v-if="data.showImages">
+                    <div v-if="!imgLoaded" class="absolute inset-0 animate-pulse bg-white/5"></div>
+                    <NuxtImg :src="`/img-projects/${data.imgMain}`" :alt="data.projectName" width="640" height="360"
+                        format="webp" quality="75" loading="lazy" @load="imgLoaded = true"
+                        class="h-full w-full object-cover object-top transition-opacity duration-300"
+                        :class="imgLoaded ? 'opacity-100' : 'opacity-0'" />
+                </template>
                 <div v-else-if="data.offline || previewFailed"
                     class="flex h-full w-full flex-col items-center justify-center gap-2 bg-gradient-to-br from-ink-800 to-ink-900">
                     <Icon name="tabler:world-off" size="28" class="text-zinc-600" />
@@ -64,6 +69,8 @@ const props = defineProps({
 const displayUrl = computed(() =>
     props.data.url.replace(/^https?:\/\//, '').replace(/\/$/, '')
 )
+
+const imgLoaded = ref(false)
 
 // Live previews render in an iframe; when the site is gone the frame just
 // shows a browser error page. Probe reachability from the visitor's browser

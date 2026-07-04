@@ -1,0 +1,40 @@
+# Mert Tekin
+
+> Software engineer at Huawei, based in Türkiye. Works on the Gallery app within the HarmonyOS multimedia ecosystem using ArkTS, and builds fast, modern web experiences with Vue, Nuxt 3, TypeScript and Tailwind CSS. Portfolio: https://merttekin.com
+
+## About
+
+Mert Tekin is a software engineer who turns ideas into fast, clean and thoughtful web experiences. He currently works at Huawei (2025–present) on two fronts: building the Gallery app — a core part of HarmonyOS's multimedia experience — with ArkTS, and performance optimization for DevEco Studio, Huawei's IDE for HarmonyOS.
+
+## Experience
+
+- Software Engineer @ Huawei (2025–present): HarmonyOS Gallery app (ArkTS, multimedia), DevEco Studio IDE performance optimization.
+- Front-end Developer @ NGSI (May 2023 – Oct 2024): Nuxt 3, Pinia, Tailwind CSS, i18n — online ordering systems and QR code-based table ordering menus.
+- Front-end Web Developer @ Weeb Group (Jan 2023 – Apr 2023): websites for corporate clients such as LG, Bulut Makina and UniqConsult.
+- Software Development Specialist @ Aksiyon Teknoloji (Aug 2021 – Dec 2022): Python, Django, PyQt5, RS485 Modbus RTU, image processing software support.
+- Freelance Software Developer (2018–2020): web applications, scripts and design work.
+
+## Skills
+
+- Frontend: Vue.js, Nuxt 3, JavaScript, TypeScript, ArkTS, Tailwind CSS, Pinia, React, HTML, CSS
+- Backend & Database: Python, Django, PostgreSQL, MySQL, SQL
+- Tools & Cloud: Git, AWS, Cypress, Cloudflare
+
+## Selected Projects
+
+- [Pizzeria Mini Golf](https://pizzeria-nuxt.pages.dev): online food ordering platform with QR table ordering (Nuxt, Pinia, Tailwind, i18n).
+- [Cloud7](https://cloud7v2.pages.dev/): lounge/restaurant site with Cloudflare integration (Vue, Nuxt).
+- [Yıldız İhale](https://yildizihale.com): vehicle auction platform frontend (Nuxt, Pinia, Laravel backend).
+- [GastroTech360](https://ngsi.pages.dev/): gastronomy management platform (Nuxt, Pinia, Supabase).
+- [NGSI Website](https://ngsi-v2.pages.dev/): corporate website with multilingual support.
+- More at https://merttekin.com/project
+
+## Links
+
+- Website: https://merttekin.com
+- Projects: https://merttekin.com/project
+- About: https://merttekin.com/aboutme
+- CV (PDF): https://merttekin.com/MertTekinCV.pdf
+- GitHub: https://github.com/mertttekin
+- LinkedIn: https://www.linkedin.com/in/mert-tekin3406/
+- Email: merttekin.bm@gmail.com

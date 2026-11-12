@@ -1,9 +1,9 @@
 <template>
-    <section id="experience" class="section-y scroll-mt-[88px]" data-tone="coral">
+    <section id="experience" ref="section" class="section-y scroll-mt-[88px]" data-tone="coral" data-h="right">
         <div class="container-x">
             <SectionTitle title="Work Experience" subtitle="Where I've worked and what I've built along the way." />
 
-            <div class="grid-cols-site">
+            <div ref="row" class="exp-row grid-cols-site">
                 <!-- Sticky year (desktop) -->
                 <div class="hidden lg:col-span-4 lg:block" aria-hidden="true">
                     <div class="sticky top-[112px]">
@@ -14,7 +14,8 @@
                     </div>
                 </div>
 
-                <ol ref="list" class="col-span-4 border-t border-line md:col-span-8 lg:col-span-7 lg:col-start-6">
+                <div class="exp-viewport col-span-4 md:col-span-8 lg:col-span-7 lg:col-start-6">
+                <ol ref="list" class="exp-track border-t border-line">
                     <li v-for="(job, i) in jobs" :key="job.company + job.period" :data-index="i"
                         class="job relative pt-12 lg:pt-16 [&:not(:first-child)]:mt-12 lg:[&:not(:first-child)]:mt-24 lg:pl-8"
                         :class="{ 'is-active': i === active }">
@@ -33,6 +34,7 @@
                         </p>
                     </li>
                 </ol>
+                </div>
             </div>
         </div>
     </section>
@@ -62,5 +64,54 @@ onMounted(() => {
     list.value.querySelectorAll('.job').forEach((el) => io!.observe(el))
 })
 
-onBeforeUnmount(() => io?.disconnect())
+/**
+ * Desktop (>=1024, fine pointer, motion on): the job list turns into a
+ * horizontal track; the row pins and vertical scroll drives it to the left,
+ * so the page reads as flowing to the right. The sticky year follows progress.
+ */
+const section = ref<HTMLElement | null>(null)
+const row = ref<HTMLElement | null>(null)
+let revert: (() => void) | null = null
+
+onMounted(async () => {
+    const m = await useMotion()
+    if (!m || m.coarse || !section.value || !row.value || !list.value) return
+    const { gsap } = m
+    const mm = gsap.matchMedia()
+    mm.add('(min-width: 1024px)', () => {
+        const track = list.value!
+        const viewport = track.parentElement as HTMLElement
+        section.value!.classList.add('is-h')
+        io?.disconnect()
+        const dist = () => Math.max(0, track.scrollWidth - viewport.clientWidth)
+        const tween = gsap.to(track, {
+            x: () => -dist(),
+            ease: 'none',
+            scrollTrigger: {
+                trigger: row.value!,
+                start: 'center 55%',
+                end: () => '+=' + dist() * 1.1,
+                pin: true,
+                scrub: 0.6,
+                anticipatePin: 1,
+                invalidateOnRefresh: true,
+                onUpdate: (self) => {
+                    active.value = Math.min(jobs.length - 1, Math.round(self.progress * (jobs.length - 1)))
+                },
+            },
+        })
+        return () => {
+            tween.scrollTrigger?.kill()
+            tween.kill()
+            gsap.set(track, { clearProps: 'transform' })
+            section.value?.classList.remove('is-h')
+        }
+    })
+    revert = () => mm.revert()
+})
+
+onBeforeUnmount(() => {
+    io?.disconnect()
+    revert?.()
+})
 </script>

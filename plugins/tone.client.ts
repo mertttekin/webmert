@@ -35,7 +35,7 @@ export default defineNuxtPlugin((nuxtApp) => {
         const m = await useMotion()
         if (!m || m.coarse || m.lowPower.value) return
         const { gsap } = m
-        const targets = document.querySelectorAll<HTMLElement>('main section[data-tone]:not(.hero) > .container-x')
+        const targets = document.querySelectorAll<HTMLElement>('main section[data-tone]:not(.hero):not([data-h]) > .container-x')
         targets.forEach((el) => {
             el.parentElement?.classList.add('has-dolly')
             const tween = gsap.fromTo(
@@ -55,6 +55,9 @@ export default defineNuxtPlugin((nuxtApp) => {
                 gsap.set(el, { clearProps: 'transform' })
             })
         })
+        // Components pin rows (hero, experience, projects); keep trigger order = page order
+        m.ScrollTrigger.sort()
+        m.ScrollTrigger.refresh()
     }
 
     nuxtApp.hook('page:finish', () => {

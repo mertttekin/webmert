@@ -779,6 +779,9 @@ html.hydrated .slit-fade:not(.is-loaded) {
     font-family: 'Geist Mono', 'Geist Mono fallback', 'Courier New', monospace;
     font-weight: 500;
     font-size: 15px;
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
 }
 .nav-bar.is-solid {
     background: rgb(var(--bg) / 0.86);
@@ -1139,5 +1142,89 @@ body,
     body,
     .bg-bg {
         transition: none;
+    }
+}
+
+/* ------------------------------------------------------------------ */
+/* Kinetic route: hero zoom-in + horizontal tracks (JS adds the        */
+/* classes; without motion everything stays a normal vertical page)   */
+/* ------------------------------------------------------------------ */
+.hero-portrait.is-zooming {
+    position: relative;
+    z-index: 2;
+    will-change: transform;
+}
+.hero-portrait.is-zooming::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgb(var(--bg));
+    opacity: var(--zoom-dim, 0);
+    pointer-events: none;
+}
+
+/* Experience: track flows to the right (moves left) */
+#experience.is-h .exp-viewport {
+    overflow-x: clip;
+    margin-right: calc(-1 * (clamp(20px, 5vw, 72px) + max(0px, (100vw - 1440px) / 2)));
+}
+#experience.is-h .exp-track {
+    display: flex;
+    width: max-content;
+    gap: clamp(40px, 5vw, 96px);
+    padding-right: clamp(20px, 5vw, 72px);
+    will-change: transform;
+}
+#experience.is-h .job {
+    flex: none;
+    width: min(560px, 36vw);
+    margin-top: 0 !important;
+}
+
+/* Projects: track laid out right-to-left, slides from left to right */
+.work-viewport {
+    position: relative;
+}
+section.is-h .work-viewport {
+    overflow-x: clip;
+    margin-inline: calc(-1 * (clamp(20px, 5vw, 72px) + max(0px, (100vw - 1440px) / 2)));
+    padding-block: 24px;
+}
+section.is-h .work-grid {
+    display: flex;
+    flex-direction: row-reverse;
+    width: max-content;
+    gap: clamp(32px, 4vw, 72px);
+    padding-inline: clamp(20px, 5vw, 72px);
+    will-change: transform;
+}
+section.is-h .work-item {
+    --focus: 1;
+    flex: none;
+    width: min(640px, 80vw);
+    margin-top: 0;
+    transform: scale(calc(0.84 + var(--focus) * 0.16));
+    transform-origin: 50% 60%;
+    opacity: calc(0.45 + var(--focus) * 0.55);
+}
+section.is-h .work-item .work-media img {
+    transform: scale(calc(1.14 - var(--focus) * 0.14));
+}
+section.is-h .work-item .work-media {
+    overflow: hidden;
+}
+@media (min-width: 1024px) {
+    section.is-h .work-item {
+        width: min(640px, 44vw);
+    }
+}
+@media (min-width: 768px) {
+    section.is-h .work-item {
+        width: min(640px, 62vw);
+    }
+}
+@media (min-width: 1024px) {
+    section.is-h .work-item {
+        width: min(640px, 44vw);
     }
 }

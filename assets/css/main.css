@@ -1145,23 +1145,7 @@ body,
     }
 }
 
-/* ------------------------------------------------------------------ */
-/* Kinetic route: hero zoom-in + horizontal tracks (JS adds the        */
-/* classes; without motion everything stays a normal vertical page)   */
-/* ------------------------------------------------------------------ */
-.hero-portrait.is-zooming {
-    position: relative;
-    z-index: 2;
-    will-change: transform;
-}
-.hero-portrait.is-zooming::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgb(var(--bg));
-    opacity: var(--zoom-dim, 0);
-    pointer-events: none;
-}
+/* Kinetic route: horizontal tracks (JS adds the classes; without motion the page stays vertical) */
 
 /* Experience: track flows to the right (moves left) */
 #experience.is-h .exp-viewport {
@@ -1227,4 +1211,19 @@ section.is-h .work-item .work-media {
     section.is-h .work-item {
         width: min(640px, 44vw);
     }
+}
+
+/* Dark brand logos (AWS, MySQL, Cypress, Django) vanish on the dark theme:
+   flip them to a light silhouette there */
+:root:not([data-theme='light']) .skill-icon.is-dark-logo {
+    filter: grayscale(1) invert(1) brightness(0.9);
+}
+:root:not([data-theme='light']) .skill-cell:hover .skill-icon.is-dark-logo,
+:root:not([data-theme='light']) .skill-cell:focus-within .skill-icon.is-dark-logo {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+/* Footer headline: the tight display leading made "p"/"j" descenders touch line 2 */
+#contact h2.t-display-l {
+    line-height: 1.08;
 }

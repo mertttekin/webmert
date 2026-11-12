@@ -8,7 +8,7 @@
                     <h3 class="t-h3 col-span-4 mb-6 text-ink md:col-span-8 lg:col-span-3 lg:mb-0">{{ group.name }}</h3>
                     <ul class="skill-grid col-span-4 md:col-span-8 lg:col-span-9">
                         <li v-for="skill in group.skills" :key="skill.name" class="skill-cell t-body-s">
-                            <Icon :name="skill.icon" size="20" class="skill-icon shrink-0" />
+                            <Icon :name="skill.icon" size="20" class="skill-icon shrink-0" :class="{ 'is-dark-logo': skill.dark }" />
                             <span class="skill-name">{{ skill.name }}</span>
                         </li>
                     </ul>
@@ -39,9 +39,9 @@ const groups = [
         name: 'Backend & Database',
         skills: [
             { name: 'Python', icon: 'logos:python' },
-            { name: 'Django', icon: 'logos:django-icon' },
+            { name: 'Django', icon: 'logos:django-icon', dark: true },
             { name: 'PostgreSQL', icon: 'logos:postgresql' },
-            { name: 'MySQL', icon: 'logos:mysql-icon' },
+            { name: 'MySQL', icon: 'logos:mysql-icon', dark: true },
             { name: 'SQL', icon: 'tabler:database' },
         ],
     },
@@ -49,8 +49,8 @@ const groups = [
         name: 'Tools & Cloud',
         skills: [
             { name: 'Git', icon: 'logos:git-icon' },
-            { name: 'AWS', icon: 'logos:aws' },
-            { name: 'Cypress', icon: 'logos:cypress-icon' },
+            { name: 'AWS', icon: 'logos:aws', dark: true },
+            { name: 'Cypress', icon: 'logos:cypress-icon', dark: true },
             { name: 'Cloudflare', icon: 'logos:cloudflare-icon' },
         ],
     },

@@ -58,42 +58,10 @@ onMounted(async () => {
     if (!m || m.coarse || !section.value) return
     const ctx = m.gsap.context(() => {
         const mm = m.gsap.matchMedia()
-        // Zoom-in: the hero pins while the portrait travels to the centre and
-        // grows until it fills the screen; the rest of the hero slides away left.
         mm.add('(min-width: 1024px)', () => {
-            const p = portrait.value!
-            const geo = () => {
-                const s = section.value!.getBoundingClientRect()
-                const r = p.getBoundingClientRect()
-                const top = r.top - s.top
-                return {
-                    scale: Math.max(window.innerWidth / r.width, window.innerHeight / r.height) * 1.04,
-                    x: window.innerWidth / 2 - (r.left + r.width / 2),
-                    y: window.innerHeight / 2 - (top + r.height / 2),
-                }
-            }
-            let g = geo()
-            const tl = m.gsap.timeline({
-                defaults: { ease: 'none' },
-                scrollTrigger: {
-                    trigger: section.value,
-                    start: 'top top',
-                    end: '+=110%',
-                    pin: true,
-                    scrub: 0.6,
-                    anticipatePin: 1,
-                    invalidateOnRefresh: true,
-                    onRefreshInit: () => {
-                        m.gsap.set(p, { clearProps: 'transform' })
-                        g = geo()
-                    },
-                },
-            })
-            p.classList.add('is-zooming')
-            tl.to(content.value!.querySelectorAll(':scope > :not(.hero-portrait)'), { xPercent: -18, opacity: 0, stagger: 0.04, duration: 0.6 }, 0)
-                .to(p, { x: () => g.x, y: () => g.y, scale: () => g.scale, duration: 1 }, 0)
-                .to(p, { '--zoom-dim': 1, duration: 0.3 }, 0.75)
-            return () => p.classList.remove('is-zooming')
+            const st = { trigger: section.value, start: 'top top', end: 'bottom top', scrub: true }
+            m.gsap.to(content.value, { yPercent: -12, ease: 'none', scrollTrigger: st })
+            m.gsap.to(portrait.value, { yPercent: -6, ease: 'none', scrollTrigger: { ...st } })
         })
     }, section.value)
     revert = () => ctx.revert()

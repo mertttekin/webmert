@@ -1,5 +1,5 @@
 <template>
-    <section id="experience" class="section-y scroll-mt-[88px]">
+    <section id="experience" class="section-y scroll-mt-[88px]" data-tone="coral">
         <div class="container-x">
             <SectionTitle title="Work Experience" subtitle="Where I've worked and what I've built along the way." />
 

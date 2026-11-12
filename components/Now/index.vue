@@ -1,5 +1,5 @@
 <template>
-    <section ref="section" class="section-y" aria-label="Now">
+    <section ref="section" class="section-y" data-tone="amber" aria-label="Now">
         <div class="container-x grid-cols-site">
             <p ref="paragraph" class="t-statement col-span-4 text-ink md:col-span-8 lg:col-span-10">
                 <template v-for="(w, i) in words" :key="i"><span class="now-word" :class="w.strong ? 'font-semibold' : ''">{{ w.text }}</span>{{ w.space }}</template>

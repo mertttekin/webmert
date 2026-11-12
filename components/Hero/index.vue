@@ -1,5 +1,5 @@
 <template>
-    <section ref="section" class="hero relative" aria-label="Introduction">
+    <section ref="section" class="hero relative" data-tone="emerald" aria-label="Introduction">
         <div ref="content" class="container-x grid-cols-site hero-grid">
             <!-- Brand strip: the site's only eyebrow -->
             <div class="col-span-4 flex items-center gap-3 md:col-span-6" :class="intro ? 'intro-fade-rise' : ''"

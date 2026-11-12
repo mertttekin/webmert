@@ -1,5 +1,5 @@
 <template>
-    <section ref="section" class="section-y">
+    <section ref="section" class="section-y" data-tone="ice">
         <div class="container-x">
             <SectionTitle title="Featured Projects" subtitle="A selection of things I've built along the way." />
 

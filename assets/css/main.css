@@ -998,3 +998,146 @@ html.hydrated .slit-fade:not(.is-loaded) {
 .contact-link:hover {
     color: rgb(var(--ink));
 }
+
+/* ------------------------------------------------------------------ */
+/* Chromatic time: section tones                                       */
+/* Each section owns one exposure tone; <html data-tone> follows the   */
+/* section at mid-viewport and re-tints the page.                      */
+/* ------------------------------------------------------------------ */
+[data-tone='emerald'] { --t-acc: 52 211 153;  --t-acc-l: 10 122 79;  --t-bg: 11 13 12; --t-bg-l: 242 244 241; }
+[data-tone='amber']   { --t-acc: 245 184 65;  --t-acc-l: 133 86 0;   --t-bg: 15 13 9;  --t-bg-l: 246 243 236; }
+[data-tone='coral']   { --t-acc: 255 132 102; --t-acc-l: 170 52 26;  --t-bg: 15 11 10; --t-bg-l: 246 240 238; }
+[data-tone='ice']     { --t-acc: 112 202 236; --t-acc-l: 0 100 134;  --t-bg: 9 12 15;  --t-bg-l: 237 242 246; }
+[data-tone='lime']    { --t-acc: 196 226 92;  --t-acc-l: 74 100 0;   --t-bg: 12 14 9;  --t-bg-l: 241 244 234; }
+
+[data-tone] {
+    --accent: var(--t-acc);
+    --accent-strong: var(--t-acc);
+    --accent-line: var(--t-acc);
+    --selection: rgb(var(--t-acc) / 0.28);
+}
+:root[data-theme='light'] [data-tone],
+:root[data-theme='light'][data-tone] {
+    --accent-strong: var(--t-acc-l);
+    --accent-line: var(--t-acc-l);
+    --selection: rgb(var(--t-acc-l) / 0.2);
+}
+@media (prefers-color-scheme: light) {
+    :root:not([data-theme='dark']) [data-tone],
+    :root:not([data-theme='dark'])[data-tone] {
+        --accent-strong: var(--t-acc-l);
+        --accent-line: var(--t-acc-l);
+        --selection: rgb(var(--t-acc-l) / 0.2);
+    }
+}
+:root[data-tone] { --bg: var(--t-bg); }
+:root[data-theme='light'][data-tone] { --bg: var(--t-bg-l); }
+@media (prefers-color-scheme: light) {
+    :root:not([data-theme='dark'])[data-tone] { --bg: var(--t-bg-l); }
+}
+body,
+.bg-bg {
+    transition: background-color 900ms var(--ease-out);
+}
+
+/* Depth dolly: sections rise out of the page plane (JS adds .has-dolly) */
+.has-dolly {
+    perspective: 1600px;
+    perspective-origin: 50% 0%;
+}
+
+/* ------------------------------------------------------------------ */
+/* Louver Gate: section transition wall                                */
+/* ------------------------------------------------------------------ */
+.louver {
+    --n: var(--n-d);
+    margin-block: calc(clamp(96px, 14vw, 192px) * -0.45);
+    overflow-x: clip;
+}
+.louver-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    color: rgb(var(--ink-2));
+}
+.louver-meta-rule {
+    flex: 1;
+    height: 1px;
+    background: rgb(var(--line));
+}
+.louver-wall {
+    display: grid;
+    grid-template-columns: repeat(var(--n), minmax(0, 1fr));
+    column-gap: 2px;
+    height: clamp(120px, 22vw, 320px);
+    perspective: 1400px;
+}
+.louver-slat {
+    position: relative;
+    transform-style: preserve-3d;
+    /* resting (no JS / reduced motion) state: exposed side facing out */
+    transform: rotateY(180deg);
+}
+.louver-face {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+.louver-face.is-front {
+    background: rgb(var(--surface));
+    box-shadow: inset 0 0 0 1px rgb(var(--line));
+}
+.louver-face.is-back {
+    transform: rotateY(180deg);
+    background: rgb(var(--accent));
+}
+.louver-text {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(var(--i) * -100% - var(--i) * 2px);
+    width: calc(var(--n) * 100% + (var(--n) - 1) * 2px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.louver-text::before {
+    content: attr(data-text);
+    font-family: Anybody, 'Anybody fallback', Arial, sans-serif;
+    font-stretch: 118%;
+    font-weight: 800;
+    font-size: clamp(2.4rem, 11vw, 11.5rem);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    white-space: nowrap;
+}
+.louver-face.is-front .louver-text::before {
+    color: transparent;
+    -webkit-text-stroke: 1px rgb(var(--accent-line));
+}
+.louver-face.is-back .louver-text::before {
+    color: rgb(var(--accent-ink));
+}
+.louver.is-live .louver-slat {
+    will-change: transform;
+}
+@media (max-width: 767px), (pointer: coarse) {
+    .louver {
+        --n: var(--n-m);
+    }
+    .louver-slat:nth-child(n + 9) {
+        display: none;
+    }
+    .louver-wall {
+        perspective: 900px;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    body,
+    .bg-bg {
+        transition: none;
+    }
+}

@@ -1,5 +1,5 @@
 <template>
-    <section id="skills" ref="section" class="section-y scroll-mt-[88px]">
+    <section id="skills" ref="section" class="section-y scroll-mt-[88px]" data-tone="lime">
         <div class="container-x">
             <SectionTitle title="Skills & Tools" subtitle="Technologies I use to bring ideas to life." />
 

@@ -1,5 +1,5 @@
 <template>
-    <footer id="contact" class="scroll-mt-[88px] pb-8 pt-[clamp(96px,14vw,192px)]">
+    <footer id="contact" data-tone="emerald" class="scroll-mt-[88px] pb-8 pt-[clamp(96px,14vw,192px)]">
         <div class="container-x">
             <div class="grid-cols-site">
                 <div class="col-span-4 md:col-span-8 lg:col-span-10">

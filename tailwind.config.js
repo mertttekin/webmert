@@ -1,7 +1,10 @@
 /** @type {import('tailwindcss').Config} */
+const token = (name) => `rgb(var(--${name}) / <alpha-value>)`;
+
 module.exports = {
   content: [
     "./components/**/*.{js,vue,ts}",
+    "./composables/**/*.{js,ts}",
     "./layouts/**/*.vue",
     "./pages/**/*.vue",
     "./plugins/**/*.{js,ts}",
@@ -9,39 +12,46 @@ module.exports = {
     "./app.vue",
   ],
   theme: {
+    // TIMESLICE: every corner is square, no exceptions
+    borderRadius: {
+      none: "0",
+      DEFAULT: "0",
+    },
+    boxShadow: {
+      none: "none",
+    },
     extend: {
       fontFamily: {
-        sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
-        display: ["Space Grotesk", "Inter", "sans-serif"],
-        mono: ["JetBrains Mono", "ui-monospace", "monospace"],
+        display: ["Anybody", '"Anybody fallback"', "Arial", "sans-serif"],
+        sans: ["Geist", '"Geist fallback"', "Arial", "system-ui", "sans-serif"],
+        mono: ['"Geist Mono"', '"Geist Mono fallback"', '"Courier New"', "ui-monospace", "monospace"],
       },
       colors: {
-        ink: {
-          950: "#050505",
-          900: "#0a0a0b",
-          800: "#111113",
-        },
-        accent: {
-          DEFAULT: "#34d399",
-          dim: "#10b981",
-        },
+        bg: token("bg"),
+        surface: token("surface"),
+        "surface-2": token("surface-2"),
+        line: token("line"),
+        "line-strong": token("line-strong"),
+        ink: token("ink"),
+        "ink-2": token("ink-2"),
+        "ink-3": token("ink-3"),
+        accent: token("accent"),
+        "accent-ink": token("accent-ink"),
+        "accent-strong": token("accent-strong"),
+        "accent-line": token("accent-line"),
       },
       maxWidth: {
         "8xl": "1440px",
       },
-      animation: {
-        blink: "blink 1.1s step-end infinite",
-        "fade-up": "fadeUp .7s ease both",
+      transitionTimingFunction: {
+        out: "cubic-bezier(0.16, 1, 0.3, 1)",
+        inout: "cubic-bezier(0.76, 0, 0.24, 1)",
       },
-      keyframes: {
-        blink: {
-          "0%, 100%": { opacity: "1" },
-          "50%": { opacity: "0" },
-        },
-        fadeUp: {
-          from: { opacity: "0", transform: "translateY(20px)" },
-          to: { opacity: "1", transform: "translateY(0)" },
-        },
+      zIndex: {
+        cursor: "40",
+        nav: "50",
+        menu: "60",
+        shutter: "70",
       },
     },
   },

@@ -1,9 +1,10 @@
 <template>
     <div>
         <Hero />
+        <Now />
         <Experience />
-        <Skills />
         <HomeProject />
+        <Skills />
         <ScrollToTop />
     </div>
 </template>

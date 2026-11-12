@@ -1,47 +1,92 @@
 <template>
-    <footer id="contact" class="mt-16 border-t border-white/5">
-        <div class="mx-auto max-w-6xl px-5 py-16 sm:px-6 sm:py-24">
-            <div v-reveal class="text-center">
-                <p class="mb-3 font-mono text-xs tracking-widest text-accent sm:text-sm">
-                    <span class="text-zinc-600">04</span> // contact
-                </p>
-                <h2 class="mx-auto max-w-2xl font-display text-3xl font-semibold text-white sm:text-5xl">
-                    Have a project in mind?<br />
-                    <span class="text-zinc-500">Let's build it together.</span>
-                </h2>
-                <p class="mx-auto mt-5 max-w-md text-sm text-zinc-400 sm:text-base">
-                    I'm always up for collaborations, side projects and good conversations about technology.
-                </p>
-
-                <div class="mt-9 flex flex-wrap items-center justify-center gap-4">
-                    <a href="mailto:merttekin.bm@gmail.com"
-                        class="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-ink-950 transition-colors hover:bg-accent-dim">
-                        <Icon name="tabler:mail" size="18" />
-                        merttekin.bm@gmail.com
-                    </a>
-                    <a href="tel:+905302487969"
-                        class="inline-flex items-center gap-2 rounded-lg border border-white/10 px-6 py-3 text-sm font-medium text-zinc-200 transition-colors hover:border-accent/50 hover:text-accent">
-                        <Icon name="tabler:phone" size="18" />
-                        +90 530 248 79 69
-                    </a>
-                </div>
-
-                <div class="mt-8 flex items-center justify-center gap-5">
-                    <NuxtLink to="https://github.com/mertttekin" target="_blank" aria-label="GitHub"
-                        class="text-zinc-500 transition-colors hover:text-white">
-                        <Icon name="tabler:brand-github" size="24" />
-                    </NuxtLink>
-                    <NuxtLink to="https://www.linkedin.com/in/mert-tekin3406/" target="_blank" aria-label="LinkedIn"
-                        class="text-zinc-500 transition-colors hover:text-white">
-                        <Icon name="tabler:brand-linkedin" size="24" />
-                    </NuxtLink>
+    <footer id="contact" class="scroll-mt-[88px] pb-8 pt-[clamp(96px,14vw,192px)]">
+        <div class="container-x">
+            <div class="grid-cols-site">
+                <div class="col-span-4 md:col-span-8 lg:col-span-10">
+                    <h2 class="t-display-l text-ink">
+                        Have a project in mind?<br />
+                        <span class="text-ink-2">Let's build it together.</span>
+                    </h2>
+                    <p class="t-body-l measure mt-6 text-ink-2">
+                        I'm always up for collaborations, side projects and good conversations about technology.
+                    </p>
                 </div>
             </div>
 
-            <div class="mt-16 flex flex-col items-center justify-between gap-3 border-t border-white/5 pt-8 font-mono text-xs text-zinc-600 sm:flex-row">
-                <p>© {{ new Date().getFullYear() }} Mert Tekin</p>
-                <p>designed &amp; built with <span class="text-accent">Nuxt</span> + <span class="text-accent">Tailwind</span></p>
+            <div class="mt-16 flex flex-col items-start gap-4 lg:mt-24">
+                <SlitText :text="SOCIAL.email" as="a" :href="`mailto:${SOCIAL.email}`" :slices="16" :slices-mobile="10"
+                    source="scroll" :step-ms="[18, 30]" :gain="0.6" :max-shift-em="0.14"
+                    class="footer-email u-line max-w-full text-ink" />
+                <button v-if="canCopy" type="button" class="btn btn-secondary btn-sm t-meta h-11" @click="copy">
+                    <Icon :name="copied ? 'tabler:check' : 'tabler:copy'" size="16" />
+                    <span aria-live="polite">{{ copied ? 'Copied' : 'Copy' }}</span>
+                </button>
+            </div>
+
+            <ul class="mt-12 flex flex-wrap gap-x-6 gap-y-2">
+                <li>
+                    <a :href="SOCIAL.phoneHref" class="contact-link">
+                        <Icon name="tabler:phone" size="20" />{{ SOCIAL.phoneLabel }}
+                    </a>
+                </li>
+                <li>
+                    <a :href="SOCIAL.github" target="_blank" rel="noopener" class="contact-link">
+                        <Icon name="tabler:brand-github" size="20" />GitHub
+                    </a>
+                </li>
+                <li>
+                    <a :href="SOCIAL.linkedin" target="_blank" rel="noopener" class="contact-link">
+                        <Icon name="tabler:brand-linkedin" size="20" />LinkedIn
+                    </a>
+                </li>
+                <li>
+                    <a :href="SOCIAL.cv" target="_blank" rel="noopener" class="contact-link">
+                        <Icon name="tabler:file-cv" size="20" />resume.pdf
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Plain link list; also the no-JS target of the mobile menu button -->
+            <nav id="site-nav-fallback" aria-label="Footer" class="mt-16">
+                <ul class="flex flex-wrap gap-x-6">
+                    <li v-for="link in links" :key="link.label">
+                        <NuxtLink :to="link.to ?? (link.everywhere ? `#${link.section}` : `/#${link.section}`)"
+                            class="t-meta inline-flex min-h-[44px] items-center text-ink-2 hover:text-ink">{{ link.label }}</NuxtLink>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="mt-8 flex flex-col gap-2 border-t border-line pt-6 md:flex-row md:items-center md:justify-between">
+                <p class="t-micro text-ink-3">© {{ year }} Mert Tekin</p>
+                <p class="t-micro text-ink-3">Designed &amp; built with Nuxt + Tailwind</p>
             </div>
         </div>
     </footer>
 </template>
+
+<script setup lang="ts">
+const links = SITE_LINKS
+// SSR value is baked at generate time; refreshed after hydration (no mismatch)
+const year = ref(new Date().getFullYear())
+
+const canCopy = ref(false)
+const copied = ref(false)
+let timer: ReturnType<typeof setTimeout> | undefined
+
+const copy = async () => {
+    try {
+        await navigator.clipboard.writeText(SOCIAL.email)
+        copied.value = true
+        clearTimeout(timer)
+        timer = setTimeout(() => (copied.value = false), 1600)
+    } catch {
+        /* permission denied: leave the label as is */
+    }
+}
+
+onMounted(() => {
+    year.value = new Date().getFullYear()
+    canCopy.value = !!navigator.clipboard?.writeText && window.isSecureContext
+})
+onBeforeUnmount(() => clearTimeout(timer))
+</script>

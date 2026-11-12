@@ -1,96 +1,138 @@
 <template>
-    <header class="fixed inset-x-0 top-0 z-50 transition-colors duration-300"
-        :class="scrolled ? 'border-b border-white/5 bg-ink-950/80 backdrop-blur-xl' : 'bg-transparent'">
-        <nav class="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:h-20 sm:px-6">
-            <!-- Logo -->
-            <NuxtLink to="/" class="font-mono text-sm text-zinc-100 sm:text-base" @click="menuOpen = false">
-                mert<span class="text-accent">.</span>tekin<span class="text-zinc-500">()</span>
+    <header ref="header"
+        class="nav-bar fixed inset-x-0 top-0 z-nav border-b transition-[transform,background-color,border-color] duration-[280ms] ease-out"
+        :class="[hidden ? '-translate-y-full' : '', solid ? 'is-solid border-line' : 'border-transparent']"
+        @focusin="focusInside = true" @focusout="focusInside = false">
+        <nav class="container-x flex h-16 items-center justify-between gap-6 lg:h-[72px]" aria-label="Main">
+            <NuxtLink to="/" class="wordmark shrink-0 text-ink" aria-label="Mert Tekin, home">
+                mert<span class="text-accent-strong">.</span>tekin<span class="text-ink-3">()</span>
             </NuxtLink>
 
-            <!-- Desktop links -->
-            <ul class="hidden items-center gap-8 text-sm text-zinc-400 md:flex">
-                <li v-for="link in links" :key="link.label">
-                    <NuxtLink v-if="link.to" :to="link.to"
-                        class="transition-colors hover:text-white">{{ link.label }}</NuxtLink>
-                    <button v-else @click="scrollToSection(link.section, routePath)"
-                        class="transition-colors hover:text-white">{{ link.label }}</button>
-                </li>
-            </ul>
-
-            <div class="flex items-center gap-4">
-                <div class="hidden items-center gap-4 md:flex">
-                    <NuxtLink to="https://github.com/mertttekin" target="_blank" aria-label="GitHub"
-                        class="text-zinc-400 transition-colors hover:text-white">
+            <div class="hidden items-center gap-6 lg:flex xl:gap-8">
+                <ul class="flex items-center gap-6 xl:gap-8">
+                    <li v-for="(link, i) in links" :key="link.label" :class="intro ? 'intro-fade' : ''"
+                        :style="intro ? { animationDelay: `${240 + i * 40}ms` } : undefined">
+                        <a :href="hrefOf(link)" class="nav-link t-body-s text-ink-2 transition-colors duration-[180ms] hover:text-ink"
+                            :class="{ 'is-active': isActive(link) }" :aria-current="isActive(link) && link.to ? 'page' : undefined"
+                            @click.prevent="go(link)">{{ link.label }}</a>
+                    </li>
+                </ul>
+                <div class="flex items-center" :class="intro ? 'intro-fade' : ''"
+                    :style="intro ? { animationDelay: `${240 + links.length * 40}ms` } : undefined">
+                    <a :href="SOCIAL.github" target="_blank" rel="noopener" aria-label="GitHub"
+                        class="inline-flex h-11 w-11 items-center justify-center text-ink-2 transition-colors duration-[180ms] hover:text-ink">
                         <Icon name="tabler:brand-github" size="20" />
-                    </NuxtLink>
-                    <NuxtLink to="https://www.linkedin.com/in/mert-tekin3406/" target="_blank" aria-label="LinkedIn"
-                        class="text-zinc-400 transition-colors hover:text-white">
+                    </a>
+                    <a :href="SOCIAL.linkedin" target="_blank" rel="noopener" aria-label="LinkedIn"
+                        class="inline-flex h-11 w-11 items-center justify-center text-ink-2 transition-colors duration-[180ms] hover:text-ink">
                         <Icon name="tabler:brand-linkedin" size="20" />
-                    </NuxtLink>
+                    </a>
+                    <ThemeToggle />
+                    <UiButton :href="SOCIAL.cv" target="_blank" variant="secondary" size="sm" class="ml-3">resume.pdf</UiButton>
                 </div>
-                <a href="/MertTekinCV.pdf" target="_blank"
-                    class="hidden rounded-lg border border-white/10 px-4 py-2 font-mono text-xs text-zinc-300 transition-colors hover:border-accent/50 hover:text-accent md:block">
-                    resume.pdf
-                </a>
-
-                <!-- Mobile menu button -->
-                <button class="text-zinc-300 md:hidden" aria-label="Menu" @click="menuOpen = !menuOpen">
-                    <Icon :name="menuOpen ? 'tabler:x' : 'tabler:menu-2'" size="24" />
-                </button>
             </div>
-        </nav>
 
-        <!-- Mobile menu -->
-        <div v-if="menuOpen" class="border-b border-white/5 bg-ink-950/95 backdrop-blur-xl md:hidden">
-            <ul class="flex flex-col gap-1 px-5 py-4 text-sm text-zinc-300">
-                <li v-for="link in links" :key="link.label">
-                    <NuxtLink v-if="link.to" :to="link.to" class="block py-2.5" @click="menuOpen = false">
-                        {{ link.label }}
-                    </NuxtLink>
-                    <button v-else class="block w-full py-2.5 text-left"
-                        @click="scrollToSection(link.section, routePath); menuOpen = false">
-                        {{ link.label }}
-                    </button>
-                </li>
-                <li class="mt-2 flex items-center gap-5 border-t border-white/5 pt-4">
-                    <NuxtLink to="https://github.com/mertttekin" target="_blank" aria-label="GitHub" class="text-zinc-400">
-                        <Icon name="tabler:brand-github" size="22" />
-                    </NuxtLink>
-                    <NuxtLink to="https://www.linkedin.com/in/mert-tekin3406/" target="_blank" aria-label="LinkedIn" class="text-zinc-400">
-                        <Icon name="tabler:brand-linkedin" size="22" />
-                    </NuxtLink>
-                    <a href="/MertTekinCV.pdf" target="_blank" class="font-mono text-xs text-accent">resume.pdf</a>
-                </li>
-            </ul>
-        </div>
+            <!-- Without JS this jumps to the footer link list -->
+            <a ref="menuButton" href="#site-nav-fallback" role="button"
+                class="t-meta -mr-2 inline-flex h-11 min-w-[44px] items-center justify-center gap-2 px-2 text-ink lg:hidden"
+                :aria-expanded="menuOpen ? 'true' : 'false'" aria-controls="mobile-menu"
+                @click.prevent="menuOpen = true" @keydown.space.prevent="menuOpen = true">
+                Menu
+                <Icon name="tabler:menu-2" size="20" />
+            </a>
+        </nav>
     </header>
+
+    <NavbarMobileMenu :open="menuOpen" @close="closeMenu" />
 </template>
 
-<script setup>
+<script setup lang="ts">
+import type { SiteNavLink } from '~/composables/useSiteNav'
+
 const route = useRoute()
-const routePath = computed(() => (route.path === '/' ? '' : route.path))
-const { scrollToSection } = useNavigate()
+const { links, hrefOf, go } = useSiteNav()
 
-const links = [
-    { label: 'Experience', section: 'experience' },
-    { label: 'Skills', section: 'skills' },
-    { label: 'Projects', to: '/project' },
-    { label: 'About', to: '/aboutme' },
-]
+// Nav links fade in only during the home page's hard-load intro
+const intro = route.path === '/' && useIsHardLoad()
 
+const header = ref<HTMLElement | null>(null)
+const menuButton = ref<HTMLElement | null>(null)
 const menuOpen = ref(false)
-const scrolled = ref(false)
+const hidden = ref(false)
+const solid = ref(false)
+const focusInside = ref(false)
+const activeSection = ref('')
 
-const onScroll = () => {
-    scrolled.value = window.scrollY > 10
+const closeMenu = (restoreFocus = true) => {
+    menuOpen.value = false
+    if (restoreFocus) nextTick(() => menuButton.value?.focus())
 }
 
-onMounted(() => {
-    onScroll()
-    window.addEventListener('scroll', onScroll, { passive: true })
+const isActive = (link: SiteNavLink) => {
+    if (link.to) return route.path === link.to
+    if (link.everywhere) return activeSection.value === link.section
+    return route.path === '/' && activeSection.value === link.section
+}
+
+watch(menuOpen, (open) => {
+    if (open) hidden.value = false
+})
+
+let stopTrigger: (() => void) | null = null
+let sectionIO: IntersectionObserver | null = null
+let solidIO: IntersectionObserver | null = null
+
+const observeSections = () => {
+    sectionIO?.disconnect()
+    activeSection.value = ''
+    sectionIO = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((e) => {
+                if (e.isIntersecting) activeSection.value = e.target.id
+                else if (activeSection.value === e.target.id) activeSection.value = ''
+            })
+        },
+        { rootMargin: '-45% 0px -50% 0px' },
+    )
+    ;['experience', 'skills', 'contact'].forEach((id) => {
+        const el = document.getElementById(id)
+        if (el) sectionIO!.observe(el)
+    })
+}
+
+const nuxtApp = useNuxtApp()
+const offPageFinish = nuxtApp.hook('page:finish', () => {
+    observeSections()
+})
+
+onMounted(async () => {
+    const sentinel = document.getElementById('nav-sentinel')
+    if (sentinel) {
+        solidIO = new IntersectionObserver(([e]) => (solid.value = !e.isIntersecting))
+        solidIO.observe(sentinel)
+    }
+    observeSections()
+
+    const m = await useMotion()
+    if (!m) return
+    const st = m.ScrollTrigger.create({
+        start: 0,
+        end: 'max',
+        onUpdate: (self) => {
+            if (menuOpen.value || focusInside.value || self.scroll() < 120) {
+                hidden.value = false
+                return
+            }
+            hidden.value = self.direction === 1
+        },
+    })
+    stopTrigger = () => st.kill()
 })
 
 onBeforeUnmount(() => {
-    window.removeEventListener('scroll', onScroll)
+    offPageFinish()
+    stopTrigger?.()
+    sectionIO?.disconnect()
+    solidIO?.disconnect()
 })
 </script>

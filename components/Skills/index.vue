@@ -1,24 +1,24 @@
 <template>
-    <section id="skills" class="mx-auto max-w-6xl scroll-mt-28 px-5 py-16 sm:px-6 sm:py-24">
-        <SectionTitle index="02" label="tech stack" title="Skills &amp; Tools"
-            subtitle="Technologies I use to bring ideas to life." />
+    <section id="skills" ref="section" class="section-y scroll-mt-[88px]">
+        <div class="container-x">
+            <SectionTitle title="Skills & Tools" subtitle="Technologies I use to bring ideas to life." />
 
-        <div class="space-y-10">
-            <div v-for="(group, gi) in groups" :key="group.name" v-reveal="gi * 100">
-                <h3 class="mb-4 font-mono text-xs uppercase tracking-widest text-zinc-500">{{ group.name }}</h3>
-                <ul class="flex flex-wrap gap-3">
-                    <li v-for="skill in group.skills" :key="skill.name"
-                        class="group flex items-center gap-2.5 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:bg-white/[0.06]">
-                        <Icon :name="skill.icon" size="22" />
-                        <span class="text-sm text-zinc-300 transition-colors group-hover:text-white">{{ skill.name }}</span>
-                    </li>
-                </ul>
+            <div class="space-y-16">
+                <div v-for="group in groups" :key="group.name" class="grid-cols-site border-t border-line pt-8 lg:pt-10">
+                    <h3 class="t-h3 col-span-4 mb-6 text-ink md:col-span-8 lg:col-span-3 lg:mb-0">{{ group.name }}</h3>
+                    <ul class="skill-grid col-span-4 md:col-span-8 lg:col-span-9">
+                        <li v-for="skill in group.skills" :key="skill.name" class="skill-cell t-body-s">
+                            <Icon :name="skill.icon" size="20" class="skill-icon shrink-0" />
+                            <span class="skill-name">{{ skill.name }}</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const groups = [
     {
         name: 'Frontend',
@@ -55,4 +55,29 @@ const groups = [
         ],
     },
 ]
+
+const section = ref<HTMLElement | null>(null)
+let revert: (() => void) | null = null
+
+onMounted(async () => {
+    const m = await useMotion()
+    if (!m || !section.value) return
+    const ctx = m.gsap.context(() => {
+        section.value!.querySelectorAll<HTMLElement>('.skill-grid').forEach((grid) => {
+            if (grid.getBoundingClientRect().top <= window.innerHeight * 0.8) return
+            const cells = grid.querySelectorAll<HTMLElement>('.skill-cell')
+            m.gsap.set(cells, { opacity: 0, y: 16 })
+            m.ScrollTrigger.create({
+                trigger: grid,
+                start: 'top 80%',
+                once: true,
+                onEnter: () =>
+                    m.gsap.to(cells, { opacity: 1, y: 0, duration: 0.52, ease: 'power3.out', stagger: 0.018, clearProps: 'transform,opacity' }),
+            })
+        })
+    }, section.value)
+    revert = () => ctx.revert()
+})
+
+onBeforeUnmount(() => revert?.())
 </script>

@@ -27,22 +27,28 @@ export default defineNuxtConfig({
       ],
       link:[
         {rel:"icon", type:"image/x-icon", href:"/favicon.ico"},
+        {rel:"preload", as:"font", type:"font/woff2", href:"/fonts/anybody-latin.woff2", crossorigin:""},
+        {rel:"preload", as:"font", type:"font/woff2", href:"/fonts/geist-latin.woff2", crossorigin:""},
+      ],
+      script:[
+        // Applies the saved/system theme and the js flag before first paint (no FOUC)
+        {
+          tagPriority: "critical",
+          innerHTML: "(function(){try{var d=document.documentElement;d.classList.add('js');var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark'){t=window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'}d.setAttribute('data-theme',t)}catch(e){}})()",
+        },
       ]
     }
   },
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
-  modules: ["@nuxtjs/google-fonts", "@nuxt/icon", "@nuxt/image"],
-  googleFonts: {
-    families: {
-      "Inter": [400, 500, 600, 700],
-      "Space Grotesk": [400, 500, 600, 700],
-      "JetBrains Mono": [400, 500, 600],
-    },
-    display: "swap",
-    prefetch: true,
-    preconnect: true,
+  modules: ["@nuxtjs/fontaine", "@nuxt/icon", "@nuxt/image"],
+  fontMetrics: {
+    fonts: [
+      { family: "Anybody", src: "fonts/anybody-latin.woff2", fallbacks: ["Arial"] },
+      { family: "Geist", src: "fonts/geist-latin.woff2", fallbacks: ["Arial"] },
+      { family: "Geist Mono", src: "fonts/geist-mono-latin.woff2", fallbacks: ["Courier New"] },
+    ],
   },
   icon: {
     mode: "svg",
@@ -62,5 +68,12 @@ export default defineNuxtConfig({
   },
   routeRules: {
     "/**": { prerender: true },
+  },
+  hooks: {
+    // Perf: no <link rel="prefetch"> for lazy chunks (gsap/lenis load on idle anyway);
+    // on mobile they competed with the LCP image for bandwidth.
+    "build:manifest": (manifest) => {
+      for (const key in manifest) manifest[key].prefetch = false
+    },
   },
 })

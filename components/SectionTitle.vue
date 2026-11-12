@@ -1,22 +1,20 @@
 <template>
-    <div v-reveal class="mb-12 sm:mb-16">
-        <p class="mb-3 font-mono text-xs tracking-widest text-accent sm:text-sm">
-            <span class="text-zinc-600">{{ index }}</span> // {{ label }}
-        </p>
-        <h2 class="font-display text-3xl font-semibold text-white sm:text-5xl">
-            {{ title }}
-        </h2>
-        <p v-if="subtitle" class="mt-3 max-w-xl text-sm text-zinc-400 sm:text-base">
-            {{ subtitle }}
-        </p>
+    <div class="section-head-gap">
+        <SlitText :text="title" :as="as" :slices="12" :slices-mobile="8" source="scroll" :step-ms="[20, 32]" :gain="0.6"
+            :max-shift-em="0.14" :intro="intro" class="t-display-l text-ink" />
+        <p v-if="subtitle" class="t-body-l measure mt-6 text-ink-2">{{ subtitle }}</p>
+        <slot />
     </div>
 </template>
 
-<script setup>
-defineProps({
-    index: { type: String, required: true },
-    label: { type: String, required: true },
-    title: { type: String, required: true },
-    subtitle: { type: String, default: '' },
-})
+<script setup lang="ts">
+withDefaults(
+    defineProps<{
+        title: string
+        subtitle?: string
+        as?: 'h1' | 'h2'
+        intro?: 'short' | false
+    }>(),
+    { subtitle: '', as: 'h2', intro: false },
+)
 </script>
